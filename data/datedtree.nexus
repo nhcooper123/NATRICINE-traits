@@ -1,0 +1,510 @@
+#NEXUS
+
+BEGIN TAXA;
+	DIMENSIONS NTAX = 249;
+	TAXLABELS
+		seq_A_3_Rhabdophis_leonardi
+		seq_A_5_Rhabdophis_nuchalis_1
+		seq_AL_111_Rhabdophis_nuchalis_2
+		seq_BN_139_Rhabdophis_adleri_1
+		seq_A_4_Rhabdophis_nuchalis_pentasupralabialis
+		seq_BP_153_Rhabdophis_nuchalis_3
+		seq_BP_155_Rhabdophis_pentasupralabialis
+		seq_BO_146_Rhabdophis_guangdongensis
+		seq_BQ_162_Rhabdophis_swinhonis_1
+		seq_BQ_163_Rhabdophis_swinhonis_2
+		seq_BO_140_Rhabdophis_adleri_2
+		seq_BO_141_Rhabdophis_callichromus
+		seq_A_6_Rhabdophis_nigrocinctus
+		seq_BQ_165_Rhabdophis_tigrinus
+		seq_BQ_164_Rhabdophis_tigrinus_lateralis
+		seq_BO_145_Rhabdophis_formosanus
+		seq_A_8_Rhabdophis_himalayanus_1
+		seq_AL_114_Rhabdophis_himalayanus_2
+		seq_BB_15_Rhabdophis_ceylonensis
+		seq_BH_71_Rhabdophis_flaviceps
+		seq_BP_150_Rhabdophis_murudensis
+		seq_BQ_161_Rhabdophis_subminiatus_2
+		seq_AC_23_Rhabdophis_subminiatus_1
+		seq_AG_69_Rhabdophis_plumbicolor
+		seq_BH_73_Rhabdophis_rhodomelas
+		seq_AF_52_Tropidonophis_multiscutellatus_2
+		seq_AE_44_Tropidonophis_statisticus_1
+		seq_AE_45_Tropidonophis_aenigmaticus
+		seq_AF_53_Tropidonophis_multiscutellatus_3
+		seq_AF_54_Tropidonophis_statisticus_2
+		seq_AF_51_Tropidonophis_mairii_mairii
+		seq_AE_48_Tropidonophis_doriae
+		seq_AE_46_Tropidonophis_dolasii
+		seq_AF_50_Tropidonophis_picturatus
+		seq_AE_49_Tropidonophis_dahlii
+		seq_A_7_Tropidonophis_spilogaster
+		seq_BZ_264_Tropidonophis_dendrophiops
+		seq_BZ_254_Xenochrophis_trianguligerus_2
+		seq_AB_12_Xenochrophis_trianguligerus_1
+		seq_AB_10_Xenochrophis_bellula
+		seq_AB_11_Xenochrophis_maculatus
+		seq_BZ_256_Xenochrophis_vittatus
+		seq_BN_138_Rhabdophis_conspicillatus
+		seq_BO_142_Rhabdophis_chrysargos_3
+		seq_AE_43_Rhabdophis_chrysargos_1
+		seq_AH_72_Rhabdophis_chrysargos_2
+		seq_A_1_Rhabdophis_auriculata
+		seq_AF_56_Amphiesma_stolatum_2
+		seq_AF_57_Amphiesma_stolatum_1
+		seq_AC_29_Amphiesma_stolatum_3
+		seq_AL_118_Amphiesma_monticola
+		seq_BZ_255_Fowlea_tytleri
+		seq_AH_79_Fowlea_piscator_1
+		seq_AK_105_Fowlea_piscator_2
+		seq_BB_14_Fowlea_yunnanensis
+		seq_AH_78_Fowlea_piscator_3
+		seq_BZ_251_Fowlea_piscator_4
+		seq_AM_120_Fowlea_sp2
+		seq_AK_106_Fowlea_sanctijohannis
+		seq_AC_21_Fowlea_flavipunctatus_1
+		seq_AH_77_Fowlea_flavipunctatus_2
+		seq_BZ_252_Fowlea_punctulatus
+		seq_BZ_253_Fowlea_schnurrenbergeri
+		seq_BY_244_Fowlea_asperrimus
+		seq_BB_13_Atretium_schistosum_2
+		seq_AM_121_Atretium_schistosum_1
+		seq_AJ_94_Xenochrophis_cerasogaster
+		seq_AL_119_Amphiesma_beddomei
+		seq_AD_38_Natriciteres_sylvatica_1
+		seq_AI_88_Natriciteres_sylvatica_2
+		seq_AD_36_Natriciteres_sylvatica_3
+		seq_AD_34_Natriciteres_olivacea_1
+		seq_AI_87_Natriciteres_olivacea_2
+		seq_AD_33_Natriciteres_fuliginoides
+		seq_AI_83_Limnophis_bicolor
+		seq_AI_82_Limnophis_bangweolicus
+		seq_AI_81_Limnophis_branchi
+		seq_BA_2_Afronatrix_anoscopus_2
+		seq_AE_42_Afronatrix_anoscopus_3
+		seq_AE_40_Afronatrix_anoscopus_1
+		seq_AI_89_Helophis_schoutedeni
+		seq_AI_84_Hydraethiops_melanogaster
+		seq_AM_127_Lycognathophis_seychellensis
+		seq_BC_21_Hebius_bitaeniatum_1
+		seq_BE_44_Hebius_octolineatum_1
+		seq_BZ_262_Hebius_yanbianensis
+		seq_BD_36_Hebius_johannis
+		seq_BD_30_Hebius_craspedogaster_1
+		seq_BE_43_Hebius_octolineatum_2
+		seq_BC_22_Hebius_bitaeniatum_2
+		seq_BC_28_Hebius_craspedogaster_2
+		seq_BE_40_Hebius_metusium
+		seq_BD_31_Hebius_craspedogaster_3
+		seq_AF_59_Hebius_atemporale_1
+		seq_BB_19_Hebius_atemporale_2
+		seq_BC_20_Hebius_atemporale_3
+		seq_BD_32_Hebius_concelarum
+		seq_BF_52_Hebius_pryeri_2
+		seq_BF_51_Hebius_pryeri_1
+		seq_BD_34_Hebius_ishigakiensis
+		seq_BD_35_Hebius_sp
+		seq_BG_60_Hebius_vibakari_1
+		seq_BZ_266_Hebius_sangzhiensis
+		seq_BF_53_Hebius_sauteri_1
+		seq_BE_47_Hebius_optatum_2
+		seq_BE_45_Hebius_optatum_1
+		seq_BB_18_Hebius_atemporale_4
+		seq_BF_55_Hebius_sauteri_2
+		seq_BE_49_Hebius_popei_1
+		seq_AD_30_Hebius_taronense
+		seq_AG_68_Hebius_venningi_1
+		seq_BF_57_Hebius_venningi_2
+		seq_AG_60_Hebius_bitaeniatum_3
+		seq_AC_28_Hebius_octolineatum_3
+		seq_BD_38_Hebius_khasiense_2
+		seq_AC_26_Hebius_khasiense_1
+		seq_AG_61_Hebius_boulengeri_1
+		seq_BC_26_Hebius_boulengeri_2
+		seq_AG_62_Hebius_cf._boulengeri
+		seq_BD_39_Hebius_khasiense_3
+		seq_AG_67_Hebius_sp4
+		seq_AC_25_Hebius_parallelum
+		seq_BF_58_Hebius_venningi_3
+		seq_AG_63_Hebius_deschauenseei_1
+		seq_AG_65_Hebius_sp1
+		seq_AF_55_Hebius_chapaensis
+		seq_BD_33_Hebius_deschauenseei_2
+		seq_BF_59_Hebius_venningi_4
+		seq_AC_27_Hebius_modestum
+		seq_AB_15_Hebius_annamensis
+		seq_AG_66_Hebius_sp2
+		seq_AG_64_Hebius_leucomystax
+		seq_BZ_257_Hebius_andreae
+		seq_BX_239_Trachischium_monticola_2
+		seq_BZ_269_Trachischium_tenuiceps
+		seq_BZ_268_Trachischium_apteii
+		seq_AM_124_Blythia_hmuifang
+		seq_AL_116_Blythia_reticulata
+		seq_AK_101_Trachischium_fuscum
+		seq_AD_35_Trachischium_monticola_1
+		seq_AK_103_Trachischium_guentheri
+		seq_AK_102_Trachischium_laeve
+		seq_AM_123_Herpetoreas_pealii
+		seq_BG_64_Herpetoreas_burbrinki
+		seq_AD_32_Herpetoreas_sp1
+		seq_AJ_96_Herpetoreas_xenura
+		seq_BG_65_Herpetoreas_platyceps
+		seq_BH_74_Pseudoagkistrodon_rudis
+		seq_AK_100_Rhabdops_olivaceous
+		seq_BN_137_Rhabdops_aquaticus
+		seq_AB_19_Thamnophis_scalaris_1
+		seq_BX_230_Thamnophis_scaliger_1
+		seq_BW_228_Thamnophis_scalaris_2
+		seq_BX_236_Thamnophis_sumichrasti
+		seq_BV_210_Thamnophis_mendax
+		seq_BU_204_Thamnophis_godmani
+		seq_BS_189_Thamnophis_conanti
+		seq_BS_182_Thamnophis_bogerti
+		seq_BU_207_Thamnophis_lineri
+		seq_BS_186_Thamnophis_chrysocephalus
+		seq_BU_200_Thamnophis_fulvus
+		seq_AB_18_Thamnophis_exsul
+		seq_BZ_260_Thamnophis_errans
+		seq_BV_211_Thamnophis_melanogaster
+		seq_BA_1_Adelophis_foxi
+		seq_BX_237_Thamnophis_validus
+		seq_AB_20_Thamnophis_scaliger_2
+		seq_BW_225_Thamnophis_rufipunctatus
+		seq_BV_215_Thamnophis_nigronuchalis
+		seq_BU_209_Thamnophis_marcianus
+		seq_BU_205_Thamnophis_hammondii
+		seq_BV_216_Thamnophis_ordinoides
+		seq_BS_181_Thamnophis_brachystoma
+		seq_BT_197_Thamnophis_eques
+		seq_BU_202_Thamnophis_gigas
+		seq_BS_183_Thamnophis_butleri
+		seq_BW_222_Thamnophis_radix
+		seq_BT_195_Thamnophis_elegans
+		seq_BS_188_Thamnophis_couchii
+		seq_BR_179_Thamnophis_atratus
+		seq_BV_219_Thamnophis_pulchrilatus
+		seq_BT_192_Thamnophis_cyrtopsis
+		seq_BT_199_Thamnophis_exsul_1
+		seq_BW_226_Thamnophis_sauritus
+		seq_BV_218_Thamnophis_proximus
+		seq_BX_233_Thamnophis_sirtalis
+		seq_BL_110_Nerodia_paucimaculata
+		seq_BK_109_Nerodia_harteri
+		seq_BL_114_Nerodia_sipedon
+		seq_BJ_98_Nerodia_clarkii
+		seq_BK_106_Nerodia_fasciata
+		seq_BK_101_Nerodia_erythrogaster
+		seq_BL_115_Nerodia_taxispilota
+		seq_BL_112_Nerodia_rhombifer
+		seq_BN_134_Regina_septemvittata
+		seq_AC_22_Tropidoclonion_lineatum
+		seq_BK_108_Nerodia_floridana
+		seq_BJ_99_Nerodia_cyclopion
+		seq_BN_133_Regina_grahami
+		seq_BR_174_Storeria_dekayi
+		seq_BR_176_Storeria_occipitomaculata
+		seq_BR_177_Storeria_storerioides
+		seq_BY_241_Virginia_valeriae_1
+		seq_BB_16_Clonophis_kirtlandii
+		seq_BB_17_Haldea_striatula
+		seq_BG_68_Liodytes_rigida
+		seq_BG_67_Liodytes_pygaea
+		seq_BG_66_Liodytes_alleni
+		seq_BJ_92_Natrix_cetti
+		seq_BI_88_Natrix_helvatica
+		seq_BJ_91_Natrix_natrix
+		seq_BI_89_Natrix_natrix_persa
+		seq_BI_87_Natrix_astreptophora
+		seq_BJ_94_Natrix_tessellata_1
+		seq_BJ_96_Natrix_tessellata_3
+		seq_BI_80_Natrix_maura_1
+		seq_BM_129_Opisthotropis_andersonii_1
+		seq_BN_131_Opisthotropis_shenzhenensis
+		seq_BM_128_Opisthotropis_maxwelli
+		seq_AH_70_Opisthotropis_lateralis_1
+		seq_BM_127_Opisthotropis_laui
+		seq_BM_125_Opisthotropis_zhaoermii
+		seq_BL_118_Opisthotropis_cheni
+		seq_BM_121_Opisthotropis_latouchii
+		seq_BM_126_Opisthotropis_kuatunensis
+		seq_AH_71_Opisthotropis_voquyi
+		seq_BM_123_Opisthotropis_jacobi
+		seq_BZ_267_Opisthotropis_hungtai
+		seq_BN_132_Opisthotropis_maculosa
+		seq_BZ_261_Opisthotropis_haihaensis
+		seq_BL_119_Opisthotropis_guangxiensis
+		seq_AJ_99_Smithophis_atemporalis
+		seq_AJ_98_Smithophis_bicolor
+		seq_BZ_259_Smithophis_linearis
+		seq_BZ_258_Opisthotropis_durandi
+		seq_AB_14_Opisthotropis_daovantieni
+		seq_BZ_265_Trimerodytes_balteata
+		seq_BQ_167_Trimerodytes_annularis
+		seq_AH_74_Trimerodytes_percarinata
+		seq_BQ_166_Trimerodytes_aequifasciata
+		seq_AB_16_Trimerodytes_praemaxillaris
+		seq_BZ_263_Trimerodytes_yapingi
+		seq_BM_122_Opisthotropis_typica
+		seq_BB_11_Aspidura_guentheri
+		seq_BB_10_Aspidura_drummondhayi
+		seq_BA_9_Aspidura_ceylonensis
+		seq_BZ_266_Aspidura_ravani
+		seq_BB_12_Aspidura_trachyprocta
+		seq_AF_58_Amphiesmoides_ornaticeps
+	;
+END;
+BEGIN TREES;
+	TRANSLATE
+		1	seq_A_3_Rhabdophis_leonardi,
+		2	seq_A_5_Rhabdophis_nuchalis_1,
+		3	seq_AL_111_Rhabdophis_nuchalis_2,
+		4	seq_BN_139_Rhabdophis_adleri_1,
+		5	seq_A_4_Rhabdophis_nuchalis_pentasupralabialis,
+		6	seq_BP_153_Rhabdophis_nuchalis_3,
+		7	seq_BP_155_Rhabdophis_pentasupralabialis,
+		8	seq_BO_146_Rhabdophis_guangdongensis,
+		9	seq_BQ_162_Rhabdophis_swinhonis_1,
+		10	seq_BQ_163_Rhabdophis_swinhonis_2,
+		11	seq_BO_140_Rhabdophis_adleri_2,
+		12	seq_BO_141_Rhabdophis_callichromus,
+		13	seq_A_6_Rhabdophis_nigrocinctus,
+		14	seq_BQ_165_Rhabdophis_tigrinus,
+		15	seq_BQ_164_Rhabdophis_tigrinus_lateralis,
+		16	seq_BO_145_Rhabdophis_formosanus,
+		17	seq_A_8_Rhabdophis_himalayanus_1,
+		18	seq_AL_114_Rhabdophis_himalayanus_2,
+		19	seq_BB_15_Rhabdophis_ceylonensis,
+		20	seq_BH_71_Rhabdophis_flaviceps,
+		21	seq_BP_150_Rhabdophis_murudensis,
+		22	seq_BQ_161_Rhabdophis_subminiatus_2,
+		23	seq_AC_23_Rhabdophis_subminiatus_1,
+		24	seq_AG_69_Rhabdophis_plumbicolor,
+		25	seq_BH_73_Rhabdophis_rhodomelas,
+		26	seq_AF_52_Tropidonophis_multiscutellatus_2,
+		27	seq_AE_44_Tropidonophis_statisticus_1,
+		28	seq_AE_45_Tropidonophis_aenigmaticus,
+		29	seq_AF_53_Tropidonophis_multiscutellatus_3,
+		30	seq_AF_54_Tropidonophis_statisticus_2,
+		31	seq_AF_51_Tropidonophis_mairii_mairii,
+		32	seq_AE_48_Tropidonophis_doriae,
+		33	seq_AE_46_Tropidonophis_dolasii,
+		34	seq_AF_50_Tropidonophis_picturatus,
+		35	seq_AE_49_Tropidonophis_dahlii,
+		36	seq_A_7_Tropidonophis_spilogaster,
+		37	seq_BZ_264_Tropidonophis_dendrophiops,
+		38	seq_BZ_254_Xenochrophis_trianguligerus_2,
+		39	seq_AB_12_Xenochrophis_trianguligerus_1,
+		40	seq_AB_10_Xenochrophis_bellula,
+		41	seq_AB_11_Xenochrophis_maculatus,
+		42	seq_BZ_256_Xenochrophis_vittatus,
+		43	seq_BN_138_Rhabdophis_conspicillatus,
+		44	seq_BO_142_Rhabdophis_chrysargos_3,
+		45	seq_AE_43_Rhabdophis_chrysargos_1,
+		46	seq_AH_72_Rhabdophis_chrysargos_2,
+		47	seq_A_1_Rhabdophis_auriculata,
+		48	seq_AF_56_Amphiesma_stolatum_2,
+		49	seq_AF_57_Amphiesma_stolatum_1,
+		50	seq_AC_29_Amphiesma_stolatum_3,
+		51	seq_AL_118_Amphiesma_monticola,
+		52	seq_BZ_255_Fowlea_tytleri,
+		53	seq_AH_79_Fowlea_piscator_1,
+		54	seq_AK_105_Fowlea_piscator_2,
+		55	seq_BB_14_Fowlea_yunnanensis,
+		56	seq_AH_78_Fowlea_piscator_3,
+		57	seq_BZ_251_Fowlea_piscator_4,
+		58	seq_AM_120_Fowlea_sp2,
+		59	seq_AK_106_Fowlea_sanctijohannis,
+		60	seq_AC_21_Fowlea_flavipunctatus_1,
+		61	seq_AH_77_Fowlea_flavipunctatus_2,
+		62	seq_BZ_252_Fowlea_punctulatus,
+		63	seq_BZ_253_Fowlea_schnurrenbergeri,
+		64	seq_BY_244_Fowlea_asperrimus,
+		65	seq_BB_13_Atretium_schistosum_2,
+		66	seq_AM_121_Atretium_schistosum_1,
+		67	seq_AJ_94_Xenochrophis_cerasogaster,
+		68	seq_AL_119_Amphiesma_beddomei,
+		69	seq_AD_38_Natriciteres_sylvatica_1,
+		70	seq_AI_88_Natriciteres_sylvatica_2,
+		71	seq_AD_36_Natriciteres_sylvatica_3,
+		72	seq_AD_34_Natriciteres_olivacea_1,
+		73	seq_AI_87_Natriciteres_olivacea_2,
+		74	seq_AD_33_Natriciteres_fuliginoides,
+		75	seq_AI_83_Limnophis_bicolor,
+		76	seq_AI_82_Limnophis_bangweolicus,
+		77	seq_AI_81_Limnophis_branchi,
+		78	seq_BA_2_Afronatrix_anoscopus_2,
+		79	seq_AE_42_Afronatrix_anoscopus_3,
+		80	seq_AE_40_Afronatrix_anoscopus_1,
+		81	seq_AI_89_Helophis_schoutedeni,
+		82	seq_AI_84_Hydraethiops_melanogaster,
+		83	seq_AM_127_Lycognathophis_seychellensis,
+		84	seq_BC_21_Hebius_bitaeniatum_1,
+		85	seq_BE_44_Hebius_octolineatum_1,
+		86	seq_BZ_262_Hebius_yanbianensis,
+		87	seq_BD_36_Hebius_johannis,
+		88	seq_BD_30_Hebius_craspedogaster_1,
+		89	seq_BE_43_Hebius_octolineatum_2,
+		90	seq_BC_22_Hebius_bitaeniatum_2,
+		91	seq_BC_28_Hebius_craspedogaster_2,
+		92	seq_BE_40_Hebius_metusium,
+		93	seq_BD_31_Hebius_craspedogaster_3,
+		94	seq_AF_59_Hebius_atemporale_1,
+		95	seq_BB_19_Hebius_atemporale_2,
+		96	seq_BC_20_Hebius_atemporale_3,
+		97	seq_BD_32_Hebius_concelarum,
+		98	seq_BF_52_Hebius_pryeri_2,
+		99	seq_BF_51_Hebius_pryeri_1,
+		100	seq_BD_34_Hebius_ishigakiensis,
+		101	seq_BD_35_Hebius_sp,
+		102	seq_BG_60_Hebius_vibakari_1,
+		103	seq_BZ_266_Hebius_sangzhiensis,
+		104	seq_BF_53_Hebius_sauteri_1,
+		105	seq_BE_47_Hebius_optatum_2,
+		106	seq_BE_45_Hebius_optatum_1,
+		107	seq_BB_18_Hebius_atemporale_4,
+		108	seq_BF_55_Hebius_sauteri_2,
+		109	seq_BE_49_Hebius_popei_1,
+		110	seq_AD_30_Hebius_taronense,
+		111	seq_AG_68_Hebius_venningi_1,
+		112	seq_BF_57_Hebius_venningi_2,
+		113	seq_AG_60_Hebius_bitaeniatum_3,
+		114	seq_AC_28_Hebius_octolineatum_3,
+		115	seq_BD_38_Hebius_khasiense_2,
+		116	seq_AC_26_Hebius_khasiense_1,
+		117	seq_AG_61_Hebius_boulengeri_1,
+		118	seq_BC_26_Hebius_boulengeri_2,
+		119	seq_AG_62_Hebius_cf._boulengeri,
+		120	seq_BD_39_Hebius_khasiense_3,
+		121	seq_AG_67_Hebius_sp4,
+		122	seq_AC_25_Hebius_parallelum,
+		123	seq_BF_58_Hebius_venningi_3,
+		124	seq_AG_63_Hebius_deschauenseei_1,
+		125	seq_AG_65_Hebius_sp1,
+		126	seq_AF_55_Hebius_chapaensis,
+		127	seq_BD_33_Hebius_deschauenseei_2,
+		128	seq_BF_59_Hebius_venningi_4,
+		129	seq_AC_27_Hebius_modestum,
+		130	seq_AB_15_Hebius_annamensis,
+		131	seq_AG_66_Hebius_sp2,
+		132	seq_AG_64_Hebius_leucomystax,
+		133	seq_BZ_257_Hebius_andreae,
+		134	seq_BX_239_Trachischium_monticola_2,
+		135	seq_BZ_269_Trachischium_tenuiceps,
+		136	seq_BZ_268_Trachischium_apteii,
+		137	seq_AM_124_Blythia_hmuifang,
+		138	seq_AL_116_Blythia_reticulata,
+		139	seq_AK_101_Trachischium_fuscum,
+		140	seq_AD_35_Trachischium_monticola_1,
+		141	seq_AK_103_Trachischium_guentheri,
+		142	seq_AK_102_Trachischium_laeve,
+		143	seq_AM_123_Herpetoreas_pealii,
+		144	seq_BG_64_Herpetoreas_burbrinki,
+		145	seq_AD_32_Herpetoreas_sp1,
+		146	seq_AJ_96_Herpetoreas_xenura,
+		147	seq_BG_65_Herpetoreas_platyceps,
+		148	seq_BH_74_Pseudoagkistrodon_rudis,
+		149	seq_AK_100_Rhabdops_olivaceous,
+		150	seq_BN_137_Rhabdops_aquaticus,
+		151	seq_AB_19_Thamnophis_scalaris_1,
+		152	seq_BX_230_Thamnophis_scaliger_1,
+		153	seq_BW_228_Thamnophis_scalaris_2,
+		154	seq_BX_236_Thamnophis_sumichrasti,
+		155	seq_BV_210_Thamnophis_mendax,
+		156	seq_BU_204_Thamnophis_godmani,
+		157	seq_BS_189_Thamnophis_conanti,
+		158	seq_BS_182_Thamnophis_bogerti,
+		159	seq_BU_207_Thamnophis_lineri,
+		160	seq_BS_186_Thamnophis_chrysocephalus,
+		161	seq_BU_200_Thamnophis_fulvus,
+		162	seq_AB_18_Thamnophis_exsul,
+		163	seq_BZ_260_Thamnophis_errans,
+		164	seq_BV_211_Thamnophis_melanogaster,
+		165	seq_BA_1_Adelophis_foxi,
+		166	seq_BX_237_Thamnophis_validus,
+		167	seq_AB_20_Thamnophis_scaliger_2,
+		168	seq_BW_225_Thamnophis_rufipunctatus,
+		169	seq_BV_215_Thamnophis_nigronuchalis,
+		170	seq_BU_209_Thamnophis_marcianus,
+		171	seq_BU_205_Thamnophis_hammondii,
+		172	seq_BV_216_Thamnophis_ordinoides,
+		173	seq_BS_181_Thamnophis_brachystoma,
+		174	seq_BT_197_Thamnophis_eques,
+		175	seq_BU_202_Thamnophis_gigas,
+		176	seq_BS_183_Thamnophis_butleri,
+		177	seq_BW_222_Thamnophis_radix,
+		178	seq_BT_195_Thamnophis_elegans,
+		179	seq_BS_188_Thamnophis_couchii,
+		180	seq_BR_179_Thamnophis_atratus,
+		181	seq_BV_219_Thamnophis_pulchrilatus,
+		182	seq_BT_192_Thamnophis_cyrtopsis,
+		183	seq_BT_199_Thamnophis_exsul_1,
+		184	seq_BW_226_Thamnophis_sauritus,
+		185	seq_BV_218_Thamnophis_proximus,
+		186	seq_BX_233_Thamnophis_sirtalis,
+		187	seq_BL_110_Nerodia_paucimaculata,
+		188	seq_BK_109_Nerodia_harteri,
+		189	seq_BL_114_Nerodia_sipedon,
+		190	seq_BJ_98_Nerodia_clarkii,
+		191	seq_BK_106_Nerodia_fasciata,
+		192	seq_BK_101_Nerodia_erythrogaster,
+		193	seq_BL_115_Nerodia_taxispilota,
+		194	seq_BL_112_Nerodia_rhombifer,
+		195	seq_BN_134_Regina_septemvittata,
+		196	seq_AC_22_Tropidoclonion_lineatum,
+		197	seq_BK_108_Nerodia_floridana,
+		198	seq_BJ_99_Nerodia_cyclopion,
+		199	seq_BN_133_Regina_grahami,
+		200	seq_BR_174_Storeria_dekayi,
+		201	seq_BR_176_Storeria_occipitomaculata,
+		202	seq_BR_177_Storeria_storerioides,
+		203	seq_BY_241_Virginia_valeriae_1,
+		204	seq_BB_16_Clonophis_kirtlandii,
+		205	seq_BB_17_Haldea_striatula,
+		206	seq_BG_68_Liodytes_rigida,
+		207	seq_BG_67_Liodytes_pygaea,
+		208	seq_BG_66_Liodytes_alleni,
+		209	seq_BJ_92_Natrix_cetti,
+		210	seq_BI_88_Natrix_helvatica,
+		211	seq_BJ_91_Natrix_natrix,
+		212	seq_BI_89_Natrix_natrix_persa,
+		213	seq_BI_87_Natrix_astreptophora,
+		214	seq_BJ_94_Natrix_tessellata_1,
+		215	seq_BJ_96_Natrix_tessellata_3,
+		216	seq_BI_80_Natrix_maura_1,
+		217	seq_BM_129_Opisthotropis_andersonii_1,
+		218	seq_BN_131_Opisthotropis_shenzhenensis,
+		219	seq_BM_128_Opisthotropis_maxwelli,
+		220	seq_AH_70_Opisthotropis_lateralis_1,
+		221	seq_BM_127_Opisthotropis_laui,
+		222	seq_BM_125_Opisthotropis_zhaoermii,
+		223	seq_BL_118_Opisthotropis_cheni,
+		224	seq_BM_121_Opisthotropis_latouchii,
+		225	seq_BM_126_Opisthotropis_kuatunensis,
+		226	seq_AH_71_Opisthotropis_voquyi,
+		227	seq_BM_123_Opisthotropis_jacobi,
+		228	seq_BZ_267_Opisthotropis_hungtai,
+		229	seq_BN_132_Opisthotropis_maculosa,
+		230	seq_BZ_261_Opisthotropis_haihaensis,
+		231	seq_BL_119_Opisthotropis_guangxiensis,
+		232	seq_AJ_99_Smithophis_atemporalis,
+		233	seq_AJ_98_Smithophis_bicolor,
+		234	seq_BZ_259_Smithophis_linearis,
+		235	seq_BZ_258_Opisthotropis_durandi,
+		236	seq_AB_14_Opisthotropis_daovantieni,
+		237	seq_BZ_265_Trimerodytes_balteata,
+		238	seq_BQ_167_Trimerodytes_annularis,
+		239	seq_AH_74_Trimerodytes_percarinata,
+		240	seq_BQ_166_Trimerodytes_aequifasciata,
+		241	seq_AB_16_Trimerodytes_praemaxillaris,
+		242	seq_BZ_263_Trimerodytes_yapingi,
+		243	seq_BM_122_Opisthotropis_typica,
+		244	seq_BB_11_Aspidura_guentheri,
+		245	seq_BB_10_Aspidura_drummondhayi,
+		246	seq_BA_9_Aspidura_ceylonensis,
+		247	seq_BZ_266_Aspidura_ravani,
+		248	seq_BB_12_Aspidura_trachyprocta,
+		249	seq_AF_58_Amphiesmoides_ornaticeps
+	;
+	TREE * UNTITLED = [&R] ((((((((((((((((((((((1:2.727361,2:2.727361):0.181342,3:2.908703):0.021198,4:2.929901):1.41819,((5:3.617952,6:3.617952):0.009658,7:3.62761):0.720482):0.731867,8:5.079958):2.317478,(9:4.877243,10:4.877243):2.520193):5.067713,((11:9.622014,12:9.622014):1.20685,13:10.828864):1.636284):1.440968,((14:4.023292,15:4.023292):1.800013,16:5.823305):8.082812):1.377787,((17:6.191929,18:6.191929):6.539765,19:12.731694):2.55221):1.399508,(20:13.28033,21:13.28033):3.403082):0.859177,(22:6.717428,23:6.717428):10.825162):3.272691,24:20.81528):1.712892,25:22.528172):2.030443,(((((((((((((26:1.083886,27:1.083886):0.837314,28:1.921199):0.823448,29:2.744647):0.324102,30:3.068749):0.914015,31:3.982764):0.068695,32:4.051459):3.368282,33:7.419741):0.726958,34:8.146699):3.130797,35:11.277496):0.243213,(36:5.775615,37:5.775615):5.745093):6.347713,((((38:5.276215,39:5.276215):6.732345,40:12.008559):0.673803,(41:9.949241,42:9.949241):2.733121):0.185296,43:12.867659):5.000763):3.736126,((44:8.445928,45:8.445928):3.34038,46:11.786308):9.81824):2.078714,47:23.683262):0.875353):1.830535,(((48:5.866909,49:5.866909):5.996635,50:11.863545):3.023123,51:14.886668):11.502481):1.192411,(((((((((52:0.557284,53:0.557284):1.130102,54:1.687386):1.276957,(55:2.184932,56:2.184932):0.77941):5.629382,((57:5.308767,58:5.308767):1.23514,59:6.543907):2.049817):1.440645,(((60:3.055912,61:3.055912):4.429923,62:7.485835):0.907095,63:8.39293):1.641439):1.593641,64:11.62801):2.13531,(65:6.114369,66:6.114369):7.648952):2.222455,67:15.985775):10.176968,68:26.162743):1.418818):2.792846,(((((((69:1.136048,70:1.136048):0.908358,71:2.044406):1.311151,72:3.355557):0.577524,73:3.93308):6.767387,74:10.700467):7.144286,((75:3.609529,76:3.609529):2.439336,77:6.048865):11.795889):7.845632,((((78:1.464315,79:1.464315):1.731401,80:3.195716):11.616629,(81:10.826673,82:10.826673):3.985672):9.047377,83:23.859722):1.830664):4.684021):0.832229,(((((((((((((((((84:1.345282,85:1.345282):1.591153,86:2.936435):0.309587,(87:2.813319,88:2.813319):0.432703):0.178768,(89:0.87724,90:0.87724):2.547549):0.184971,(91:0.926625,92:0.926625):2.683135):4.68602,93:8.295781):1.131847,((94:3.829042,95:3.829042):2.254096,96:6.083138):3.34449):0.26325,(((((97:2.30721,98:2.30721):2.476422,99:4.783632):2.751884,(100:3.912882,101:3.912882):3.622634):1.21549,((102:4.217612,103:4.217612):1.359525,104:5.577137):3.173869):0.476468,((105:6.646439,106:6.646439):2.373577,(107:7.67966,108:7.67966):1.340355):0.207459):0.463403):0.280652,109:9.97153):0.404833,(((110:3.139045,111:3.139045):0.525535,112:3.664579):4.508303,(113:1.865116,114:1.865116):6.307766):2.20348):0.77617,((((115:1.65501,116:1.65501):3.706793,117:5.361802):0.85052,118:6.212322):1.951086,((119:2.571656,120:2.571656):2.537357,121:5.109013):3.054396):2.989124):0.689599,122:11.842132):1.169862,((((((123:1.339156,124:1.339156):1.39205,125:2.731206):1.508207,((126:1.209028,127:1.209028):0.293907,128:1.502935):2.736479):0.009104,129:4.248517):0.795425,130:5.043942):1.895714,131:6.939656):6.072338):1.82204,132:14.834033):3.134162,133:17.968196):5.068248,(((((134:11.997794,135:11.997794):1.69575,136:13.693544):2.953766,137:16.64731):2.71812,138:19.36543):0.49415,(((139:2.263243,140:2.263243):3.669164,141:5.932407):5.787217,142:11.719623):8.139957):3.176864):2.376,(((143:11.060538,144:11.060538):3.076541,(145:9.400202,146:9.400202):4.736877):2.321515,147:16.458594):8.953849):5.794193):0.30699,148:31.513627):0.58686,(149:6.075656,150:6.075656):26.024831):2.224913,(((((((((((((((((151:0.213498,152:0.213498):1.244189,153:1.457687):0.615992,(154:1.458096,155:1.458096):0.615583):0.982832,((156:0.007679,157:0.007679):0.439583,(158:0.021127,159:0.021127):0.426135):2.609249):0.724563,(((160:2.204588,161:2.204588):0.551032,162:2.75562):0.88557,163:3.64119):0.139884):0.344644,((164:3.701824,165:3.701824):0.21016,166:3.911985):0.213733):0.187284,167:4.313002):2.03905,(168:5.032057,169:5.032057):1.319996):0.974993,(((((((170:2.655855,171:2.655855):0.226335,172:2.882189):0.261021,((173:1.853266,174:1.853266):0.396776,175:2.250042):0.893169):0.178717,((176:0.557865,177:0.557865):1.398743,178:1.956608):1.365319):1.620391,(179:3.383352,180:3.383352):1.558967):1.259179,(181:4.066028,182:4.066028):2.13547):0.490717,183:6.692215):0.63483):0.824079,((184:2.678565,185:2.678565):3.586593,186:6.265158):1.885966):1.355461,((((((((187:0.205939,188:0.205939):2.628491,189:2.834429):2.19598,(190:2.942632,191:2.942632):2.087778):1.298071,192:6.328481):0.151752,(193:3.578738,194:3.578738):2.901495):1.26402,195:7.744253):0.854083,196:8.598336):0.667723,((197:3.090245,198:3.090245):5.595933,199:8.686177):0.579882):0.240525):1.460923,((200:0.844092,201:0.844092):6.665536,202:7.509628):3.45788):1.001487,(((203:8.032661,204:8.032661):2.100463,205:10.133123):0.852574,(206:7.221036,207:7.221036):3.764661):0.983297):0.15753,208:12.126525):14.142326,(((((209:1.634401,210:1.634401):2.442069,(211:3.008636,212:3.008636):1.067834):1.187966,213:5.264435):8.446415,(214:3.60214,215:3.60214):10.10871):1.940847,216:15.651697):10.617154):3.106902,(((((((((217:7.924498,218:7.924498):2.038093,219:9.962591):2.243943,(220:11.68648,221:11.68648):0.520054):3.963138,(((222:3.072368,223:3.072368):0.896424,224:3.968792):8.903888,225:12.87268):3.296992):1.018119,(226:9.278894,227:9.278894):7.908897):1.874087,((228:1.701221,229:1.701221):11.000919,230:12.70214):6.359738):0.536441,231:19.598319):1.386438,((((232:9.287925,233:9.287925):5.834178,234:15.122103):4.040252,235:19.162355):0.779754,236:19.942109):1.042647):4.960872,(((((237:6.726509,238:6.726509):2.74894,239:9.475449):2.388042,240:11.86349):4.144659,(241:11.976637,242:11.976637):4.031512):8.152129,243:24.160278):1.78535):3.430125):3.681629,(((244:6.52048,245:6.52048):12.446947,246:18.967427):3.136141,(247:9.085527,248:9.085527):13.018041):10.953814):1.268017):4.695415,249:39.020815);
+END;
