@@ -10,11 +10,6 @@ library(tidyverse)
 library(geiger)
 library(ggtree)
 library(ggnewscale)
-
-library(tidytree)
-library(treeio)
-
-
 #----------------------------------------------------------------
 # Read in the tree and edit species names
 #------------------------------------------------------------------
