@@ -38,13 +38,12 @@ tree
 # Read in the metadata
 #--------------------------------------------------------------
 # Read in the  metadata
-ds <- read_csv("data/trait_data_natricine_2021-03.csv")
+ds <- read_csv("data/trait_data_natricine-corrected.csv")
 
 # Replace spaces with _
 ds <-
   ds %>%
-  mutate(Species = str_replace_all(Species, " ", "_")) %>%
-  dplyr::select(-c(X10:X13))
+  mutate(Species = str_replace_all(Species, " ", "_"))
 
 #--------------------------------------------------------------
 # Extract species for each clade and subet the tree
@@ -69,17 +68,17 @@ matches <- name.check(phy = tree, data = Amer, data.names = Amer)
 # Remove non NAmerican species from the tree
 American <- drop.tip(tree, matches$tree_not_data)
 #--------------------------------------------------------------
-# Extract species from north Asian clade S,E & SE Asia (including Australia)
+# S,E & SE Asia (including Australia) = Origin
 Asia1 <- filter(ds, Origin == "Asian")
-Asia1 <- pull(Asia, Species)
+Asia1 <- pull(Asia1, Species)
 
 # Now see if the names match using name.check
-matches <- name.check(phy = tree, data = Asia1, data.names = Asia)
+matches <- name.check(phy = tree, data = Asia1, data.names = Asia1)
 
 # Match trees 
 Asian1 <- drop.tip(tree, matches$tree_not_data)
 #--------------------------------------------------------------
-# Extract species from north Asian clade S,E & SE Asia (including Australia)
+# S,E & SE Asia (excluding Australia) = OriginLTT2
 Asia2 <- filter(ds, OriginLTT2 == "Asian")
 Asia2 <- pull(Asia2, Species)
 
@@ -89,8 +88,8 @@ matches <- name.check(phy = tree, data = Asia2, data.names = Asia2)
 # Match trees 
 Asian2 <- drop.tip(tree, matches$tree_not_data)
 #--------------------------------------------------------------
-# Extract species from north Asian clade S,E & SE Asia (including Australia)
-Asia3 <- filter(ds, OriginLTT == "Asian")
+# S,E & SE Asia (including Europe, North Africa & Central Asia, excluding Australia)=OriginLTT1
+Asia3 <- filter(ds, OriginLTT1 == "Asian")
 Asia3 <- pull(Asia3, Species)
 
 # Now see if the names match using name.check
@@ -160,31 +159,33 @@ ltt(European, add = TRUE, log.lineages = FALSE,
                  col = "red", lwd = 2, lty = "dashed")
 
 #-----------------------------------------------------------------
-# S,E & SE Asia (including Europe, North Africa & Central Asia, excluding Australia)
-As1trees <- pbtree(n = length(Asian1$tip.label), nsim = 200, 
-                  scale = max(nodeHeights(Asian1)))
+# S,E & SE Asia (including Australia) = Origin
+As1trees <- pbtree(n = length(Asian1$tip.label), nsim = 200,
+                   scale = max(nodeHeights(Asian1)))
 ltt95(As1trees, log = TRUE)
-title(main = "S,E & SE Asia (including Europe, North Africa & Central Asia, excluding Australia)")
+title(main = "S, E & SE Asia (including Australia)")
 ltt(Asian1, add = TRUE, log.lineages = FALSE, 
+    col = "red", lwd = 2, lty = "dashed")
+
+#-----------------------------------------------------------------
+# S,E & SE Asia (excluding Australia) = OriginLTT2
+As2trees <- pbtree(n = length(Asian2$tip.label), nsim = 200, 
+                  scale = max(nodeHeights(Asian2)))
+ltt95(As2trees, log = TRUE)
+title(main = "S, E & SE Asia (excluding Australia)")
+ltt(Asian2, add = TRUE, log.lineages = FALSE, 
                 col = "red", lwd = 2, lty = "dashed")
 
 #-----------------------------------------------------------------
-# S,E & SE Asia (excluding Australia)
-As2trees <- pbtree(n = length(Asian2$tip.label), nsim = 200,
-                 scale = max(nodeHeights(Asian2)))
-ltt95(As2trees, log = TRUE)
-title(main = "S,E & SE Asia (excluding Australia)")
-ltt(Asian2, add = TRUE, log.lineages = FALSE, 
-             col = "red", lwd = 2, lty = "dashed")
-
-#-----------------------------------------------------------------
-# S,E & SE Asia (including Australia)
+# S,E & SE Asia (including Europe, North Africa & Central Asia, excluding Australia)=OriginLTT1
 As3trees <- pbtree(n = length(Asian3$tip.label), nsim = 200,
-                   scale = max(nodeHeights(Asian3)))
+                 scale = max(nodeHeights(Asian3)))
 ltt95(As3trees, log = TRUE)
-title(main = "S,E & SE Asia (including Australia)")
+title(main = "S,E & SE Asia (including Europe, North Africa & Central Asia, excluding Australia)")
 ltt(Asian3, add = TRUE, log.lineages = FALSE, 
              col = "red", lwd = 2, lty = "dashed")
+
+
 
 #--------
 # End PDF

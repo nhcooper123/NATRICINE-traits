@@ -1,0 +1,257 @@
+no,Species,Genera,Habit,Origin,OriginLTT,OriginLTT1,OriginLTT2,Diet,Reproduction
+1,Afronatrix_anoscopus_1,Afronatrix,Aquatic,African,African,African,African,aquatic generalist,Oviparous
+2,Afronatrix_anoscopus_2,Afronatrix,Aquatic,African,African,African,African,aquatic generalist,Oviparous
+3,Afronatrix_anoscopus_3,Afronatrix,Aquatic,African,African,African,African,aquatic generalist,Oviparous
+4,Helophis_schoutedeni,Helophis,Aquatic,African,African,African,African,NA,NA
+5,Hydraethiops_melanogaster,Hydraethiops,Aquatic,African,African,African,African,aquatic generalist,Oviparous
+6,Limnophis_bangweolicus,Limnophis,Aquatic,African,African,African,African,fish,NA
+7,Limnophis_bicolor,Limnophis,Aquatic,African,African,African,African,fish,Oviparous
+8,Limnophis_cf_bangweolicus,Limnophis,Aquatic,African,African,African,African,fish,Oviparous
+9,Lycognathophis_seychellensis,Lycognathophis,Terrestrial,African,African,African,African,lizards,Oviparous
+10,Natriciteres_fuliginoides,Natriciteres,Semiaquatic,African,African,African,African,anurans,Oviparous
+11,Natriciteres_olivacea_1,Natriciteres,Semiaquatic,African,African,African,African,generalist,Oviparous
+12,Natriciteres_olivacea_2,Natriciteres,Semiaquatic,African,African,African,African,generalist,Oviparous
+13,Natriciteres_sylvatica_1,Natriciteres,Semiaquatic,African,African,African,African,generalist,Oviparous
+14,Natriciteres_sylvatica_2,Natriciteres,Semiaquatic,African,African,African,African,generalist,Oviparous
+15,Natriciteres_sylvatica_3,Natriciteres,Semiaquatic,African,African,African,African,generalist,Oviparous
+16,Adelophis_foxi,Adelophis,Burrowing,American,American,American,American,annelids,Viviparous
+17,Clonophis_kirtlandii,Clonophis,Semiaquatic,American,American,American,American,generalist,Viviparous
+18,Haldea_striatula,Haldea,Burrowing,American,American,American,American,annelids,Viviparous
+19,Liodytes_alleni,Liodytes,Aquatic,American,American,American,American,crayfish,Viviparous
+20,Liodytes_pygaea,Liodytes,Aquatic,American,American,American,American,aquatic generalist,Viviparous
+21,Liodytes_rigida,Liodytes,Aquatic,American,American,American,American,crayfish,Viviparous
+22,Nerodia_clarkii,Nerodia,Aquatic,American,American,American,American,aquatic generalist,Viviparous
+23,Nerodia_cyclopion,Nerodia,Aquatic,American,American,American,American,aquatic generalist,Viviparous
+24,Nerodia_erythrogaster,Nerodia,Aquatic,American,American,American,American,aquatic generalist,Viviparous
+25,Nerodia_fasciata,Nerodia,Aquatic,American,American,American,American,aquatic generalist,Viviparous
+26,Nerodia_floridana,Nerodia,Aquatic,American,American,American,American,aquatic generalist,Viviparous
+27,Nerodia_harteri,Nerodia,Aquatic,American,American,American,American,aquatic generalist,Viviparous
+28,Nerodia_paucimaculata,Nerodia,Aquatic,American,American,American,American,aquatic generalist,Viviparous
+29,Nerodia_rhombifer,Nerodia,Aquatic,American,American,American,American,aquatic generalist,Viviparous
+30,Nerodia_sipedon,Nerodia,Aquatic,American,American,American,American,aquatic generalist,Viviparous
+31,Nerodia_taxispilota,Nerodia,Aquatic,American,American,American,American,aquatic generalist,Viviparous
+32,Regina_grahami,Regina,Aquatic,American,American,American,American,crayfish,Viviparous
+33,Regina_septemvittata,Regina,Aquatic,American,American,American,American,crayfish,Viviparous
+34,Storeria_dekayi,Storeria,Burrowing,American,American,American,American,mollusc,Viviparous
+35,Storeria_occipitomaculata,Storeria,Burrowing,American,American,American,American,mollusc,Viviparous
+36,Storeria_storerioides,Storeria,Burrowing,American,American,American,American,mollusc,Viviparous
+37,Thamnophis_atratus,Thamnophis,Semiaquatic,American,American,American,American,aquatic generalist,Viviparous
+38,Thamnophis_bogerti,Thamnophis,Semiaquatic,American,American,American,American,generalist,Viviparous
+39,Thamnophis_brachystoma,Thamnophis,Terrestrial,American,American,American,American,annelids,Viviparous
+40,Thamnophis_butleri,Thamnophis,Semiaquatic,American,American,American,American,generalist,Viviparous
+41,Thamnophis_chrysocephalus,Thamnophis,Semiaquatic,American,American,American,American,NA,Viviparous
+42,Thamnophis_conanti,Thamnophis,Semiaquatic,American,American,American,American,NA,Viviparous
+43,Thamnophis_couchii,Thamnophis,Aquatic,American,American,American,American,fish,Viviparous
+44,Thamnophis_cyrtopsis,Thamnophis,Semiaquatic,American,American,American,American,generalist,Viviparous
+45,Thamnophis_elegans,Thamnophis,Semiaquatic,American,American,American,American,generalist,Viviparous
+46,Thamnophis_eques,Thamnophis,Semiaquatic,American,American,American,American,generalist,Viviparous
+47,Thamnophis_errans,Thamnophis,Terrestrial,American,American,American,American,NA,Viviparous
+48,Thamnophis_exsul,Thamnophis,Terrestrial,American,American,American,American,NA,Viviparous
+49,Thamnophis_exsul,Thamnophis,Terrestrial,American,American,American,American,NA,Viviparous
+50,Thamnophis_fulvus,Thamnophis,Semiaquatic,American,American,American,American,anurans,Viviparous
+51,Thamnophis_gigas,Thamnophis,Aquatic,American,American,American,American,generalist,Viviparous
+52,Thamnophis_godmani,Thamnophis,Semiaquatic,American,American,American,American,NA,Viviparous
+53,Thamnophis_hammondii,Thamnophis,Semiaquatic,American,American,American,American,aquatic generalist,Viviparous
+54,Thamnophis_lineri,Thamnophis,Semiaquatic,American,American,American,American,NA,Viviparous
+55,Thamnophis_marcianus,Thamnophis,Semiaquatic,American,American,American,American,generalist,Viviparous
+56,Thamnophis_melanogaster,Thamnophis,Semiaquatic,American,American,American,American,generalist,Viviparous
+57,Thamnophis_mendax,Thamnophis,Terrestrial,American,American,American,American,generalist,Viviparous
+58,Thamnophis_nigronuchalis,Thamnophis,Semiaquatic,American,American,American,American,generalist,Viviparous
+59,Thamnophis_ordinoides,Thamnophis,Terrestrial,American,American,American,American,generalist,Viviparous
+60,Thamnophis_proximus,Thamnophis,Semiaquatic,American,American,American,American,generalist,Viviparous
+61,Thamnophis_pulchrilatus,Thamnophis,Semiaquatic,American,American,American,American,generalist,Viviparous
+62,Thamnophis_radix,Thamnophis,Aquatic,American,American,American,American,generalist,Viviparous
+63,Thamnophis_rufipunctatus,Thamnophis,Aquatic,American,American,American,American,aquatic generalist,Viviparous
+64,Thamnophis_sauritus,Thamnophis,Semiaquatic,American,American,American,American,generalist,Viviparous
+65,Thamnophis_scalaris_1,Thamnophis,Terrestrial,American,American,American,American,generalist,Viviparous
+66,Thamnophis_scalaris_2,Thamnophis,Terrestrial,American,American,American,American,generalist,Viviparous
+67,Thamnophis_scaliger_1,Thamnophis,Terrestrial,American,American,American,American,generalist,Viviparous
+68,Thamnophis_scaliger_2,Thamnophis,Terrestrial,American,American,American,American,generalist,Viviparous
+69,Thamnophis_sirtalis,Thamnophis,Semiaquatic,American,American,American,American,generalist,Viviparous
+70,Thamnophis_sumichrasti,Thamnophis,Aquatic,American,American,American,American,generalist,Viviparous
+71,Thamnophis_validus,Thamnophis,Aquatic,American,American,American,American,aquatic generalist,Viviparous
+72,Tropidoclonion_lineatum,Tropidoclonion,Burrowing,American,American,American,American,annelids,Viviparous
+73,Virginia_valeriae_1,Virginia,Burrowing,American,American,American,American,annelids,Viviparous
+74,Virginia_valeriae_2,Virginia,Burrowing,American,American,American,American,annelids,Viviparous
+75,Fowlea_asperrimus,Fowlea,Aquatic,Asian,African,African,African,aquatic generalist,Oviparous
+76,Amphiesma_beddomei,Beddomei,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+77,Amphiesma_monticola,Amphiesma,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+78,Amphiesma_stolatum_1,Amphiesma,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+79,Amphiesma_stolatum_2,Amphiesma,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+80,Amphiesma_stolatum_3,Amphiesma,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+81,Amphiesma_stolatum_WII,Amphiesma,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+82,Amphiesmoides_ornaticeps,Amphiesmoides,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+83,Aspidura_ceylonensis,Aspidura,Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+84,Aspidura_drummondhayi,Aspidura,Burrowing,Asian,Asian,Asian,Asian,NA,Oviparous
+85,Aspidura_guentheri,Aspidura,Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+86,Aspidura_trachyprocta,Aspidura,Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+87,Atretium_schistosum_1,Atretium,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+88,Atretium_schistosum_2,Atretium,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+89,Blythia_hmuifang,Blythia,Burrowing,Asian,Asian,Asian,Asian,annelids,NA
+90,Blythia_reticulata,Blythia,Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+91,Blythia_sp,Blythia,Burrowing,Asian,Asian,Asian,Asian,annelids,NA
+92,Fowlea_flavipunctatus_1,Fowlea,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+93,Fowlea_flavipunctatus_2,Fowlea,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+94,Fowlea_piscator_1,Fowlea,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+95,Fowlea_piscator_2,Fowlea,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+96,Fowlea_piscator_3,Fowlea,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+97,Fowlea_piscator_4,Fowlea,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+98,Fowlea_punctulatus,Fowlea,Aquatic,Asian,Asian,Asian,Asian,NA,Oviparous
+99,Fowlea_sanctijohannis,Fowlea,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+100,Fowlea_schnurrenbergeri,Fowlea,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+101,Fowlea_sp2,Fowlea,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+102,Fowlea_tytleri,Fowlea,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+103,Fowlea_yunnanensis,Fowlea,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+104,Hebius_andreae,Hebius,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+105,Hebius_annamensis,Hebius,NA,Asian,Asian,Asian,Asian,NA,NA
+106,Hebius_atemporale_1,Hebius,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+107,Hebius_atemporale_2,Hebius,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+108,Hebius_atemporale_3,Hebius,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+109,Hebius_atemporale_4,Hebius,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+110,Hebius_bitaeniatum_1,Hebius,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+111,Hebius_bitaeniatum_2,Hebius,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+112,Hebius_bitaeniatum_3,Hebius,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+113,Hebius_bitaeniatum_4,Hebius,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+114,Hebius_boulengeri_1,Hebius,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+115,Hebius_boulengeri_2,Hebius,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+116,Hebius_cf._boulengeri,Hebius,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+117,Hebius_chapaensis,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,NA,Oviparous
+118,Hebius_concelarum,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+119,Hebius_craspedogaster_1,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+120,Hebius_craspedogaster_2,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+121,Hebius_craspedogaster_3,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+122,Hebius_deschauenseei_1,Hebius,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+123,Hebius_deschauenseei_2,Hebius,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+124,Hebius_ishigakiensis,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+125,Hebius_johannis,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,fish,Oviparous
+126,Hebius_khasiense_1,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+127,Hebius_khasiense_2,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+128,Hebius_khasiense_3,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+129,Hebius_leucomystax,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+130,Hebius_metusium,Hebius,NA,Asian,Asian,Asian,Asian,NA,Oviparous
+131,Hebius_modestum,Hebius,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+132,Hebius_octolineatum_1,Hebius,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+133,Hebius_octolineatum_2,Hebius,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+134,Hebius_octolineatum_3,Hebius,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+135,Hebius_optatum_1,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,fish,Oviparous
+136,Hebius_optatum_2,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,fish,Oviparous
+137,Hebius_parallelum,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+138,Hebius_popei_1,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+139,Hebius_popei_2,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+140,Hebius_pryeri_1,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+141,Hebius_pryeri_2,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+142,Hebius_sauteri_1,Hebius,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+143,Hebius_sauteri_2,Hebius,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+144,Hebius_sp,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,NA,NA
+145,Hebius_sp1,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,NA,NA
+146,Hebius_sp2,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,NA,NA
+147,Hebius_sp4,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,NA,NA
+148,Hebius_taronense,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,NA
+149,Hebius_venningi_1,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+150,Hebius_venningi_2,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+151,Hebius_venningi_3,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+152,Hebius_venningi_4,Hebius,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+153,Hebius_vibakari_1,Hebius,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+154,Hebius_vibakari_2,Hebius,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+155,Hebius_yanbianensis,Hebius,Terrestrial,Asian,Asian,Asian,Asian,NA,NA
+156,Herpetoreas_burbrinki,Herpetoreas,Terrestrial,Asian,Asian,Asian,Asian,NA,NA
+157,Herpetoreas_pealii,Herpetoreas,Semiaquatic,Asian,Asian,Asian,Asian,NA,NA
+158,Herpetoreas_platyceps,Herpetoreas,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+159,Herpetoreas_sp,Herpetoreas,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+160,Herpetoreas_sp1,Herpetoreas,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+161,Herpetoreas_xenura,Herpetoreas,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+162,Opisthotropis_andersonii_2,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+163,Opisthotropis_cheni,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,NA,Oviparous
+164,Opisthotropis_daovantieni,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,NA,Oviparous
+165,Opisthotropis_durandi,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,NA,Oviparous
+166,Opisthotropis_guangxiensis,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,NA,Oviparous
+167,Opisthotropis_haihaensis,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,NA,Oviparous
+168,Opisthotropis_jacobi,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+169,Opisthotropis_kuatunensis,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+170,Opisthotropis_lateralis_1,Opisthotropis,Aquatic Burrowing,Asian,Asian-European,Asian,Asian,aquatic generalist,Oviparous
+171,Opisthotropis_lateralis_2,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+172,Opisthotropis_latouchii,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+173,Opisthotropis_laui,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,NA,NA
+174,Opisthotropis_maculosa,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,NA,Oviparous
+175,Opisthotropis_maxwelli,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,NA,Oviparous
+176,Opisthotropis_shenzhenensis,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,NA,NA
+177,Opisthotropis_typica,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+178,Opisthotropis_voquyi,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,NA,NA
+179,Opisthotropis_zhaoermii,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+180,Pseudoagkistrodon_rudis,Pseudoagkistrodon,Terrestrial,Asian,Asian,Asian,Asian,generalist,Viviparous
+181,Rhabdophis_adleri_1,Rhabdophis_A,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+182,Rhabdophis_adleri_2,Rhabdophis_A,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+183,Rhabdophis_auriculata,Rhabdophis_B,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+184,Rhabdophis_callichromus,Rhabdophis_A,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+185,Rhabdophis_ceylonensis,Rhabdophis_A,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+186,Rhabdophis_chrysargos_1,Rhabdophis_B,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+187,Rhabdophis_chrysargos_2,Rhabdophis_B,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+188,Rhabdophis_chrysargos_3,Rhabdophis_B,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+189,Rhabdophis_conspicillatus,Rhabdophis_B,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+190,Rhabdophis_flaviceps,Rhabdophis_A,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+191,Rhabdophis_formosanus,Rhabdophis_A,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+192,Rhabdophis_guangdongensis,Rhabdophis_A,Terrestrial,Asian,Asian,Asian,Asian,NA,NA
+193,Rhabdophis_himalayanus_1,Rhabdophis_A,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+194,Rhabdophis_himalayanus_2,Rhabdophis_A,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+195,Rhabdophis_leonardi,Rhabdophis_A,Semiaquatic,Asian,Asian,Asian,Asian,NA,Oviparous
+196,Rhabdophis_murudensis,Rhabdophis_A,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+197,Rhabdophis_nigrocinctus,Rhabdophis_A,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+198,Rhabdophis_nuchalis_1,Rhabdophis_A,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+199,Rhabdophis_nuchalis_2,Rhabdophis_A,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+200,Rhabdophis_nuchalis_3,Rhabdophis_A,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+201,Rhabdophis_pentasupralabialis_1,Rhabdophis_A,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+202,Rhabdophis_pentasupralabialis_2,Rhabdophis_A,Terrestrial,Asian,Asian,Asian,Asian,NA,Oviparous
+203,Rhabdophis_plumbicolor,Rhabdophis_A,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+204,Rhabdophis_rhodomelas,Rhabdophis_A,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+205,Rhabdophis_subminiatus_1,Rhabdophis_A,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+206,Rhabdophis_subminiatus_2,Rhabdophis_A,Semiaquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+207,Rhabdophis_swinhonis_1,Rhabdophis_A,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+208,Rhabdophis_swinhonis_2,Rhabdophis_A,Semiaquatic,Asian,Asian,Asian,Asian,anurans,Oviparous
+209,Rhabdophis_tigrinus,Rhabdophis_A,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+210,Rhabdophis_tigrinus_lateralis,Rhabdophis_A,Terrestrial,Asian,Asian,Asian,Asian,generalist,Oviparous
+211,Rhabdops_aquaticus,Rhabdops,Aquatic Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+212,Rhabdops_olivaceous,Rhabdops,Aquatic Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+213,Smithophis_atemporalis,Smithophis,Aquatic Burrowing,Asian,Asian,Asian,Asian,generalist,Oviparous
+214,Smithophis_bicolor,Smithophis,Aquatic Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+215,Smithophis_linearis,Smithophis,Aquatic Burrowing,Asian,Asian,Asian,Asian,annelids,NA
+216,Trachischium_fuscum,Trachischium,Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+217,Trachischium_guentheri,Trachischium,Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+218,Trachischium_laeve,Trachischium,Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+219,Trachischium_monticola_1,Trachischium,Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+220,Trachischium_monticola_2,Trachischium,Burrowing,Asian,Asian,Asian,Asian,annelids,Oviparous
+221,Trimerodytes_aequifasciata,Trimerodytes,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+222,Trimerodytes_annularis,Trimerodytes,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Viviparous
+223,Trimerodytes_balteata,Trimerodytes,Aquatic Burrowing,Asian,Asian,Asian,Asian,fish,Oviparous
+224,Trimerodytes_cf._aequifasciata,Trimerodytes,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+225,Trimerodytes_percarinata,Trimerodytes,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+226,Trimerodytes_praemaxillaris,Paratapinophis,Aquatic,Asian,Asian,Asian,Asian,fish,Oviparous
+227,Trimerodytes_yapingi,Trimerodytes,Aquatic,Asian,Asian,Asian,Asian,NA,Oviparous
+228,Tropidonophis_aenigmaticus,Tropidonophis,Terrestrial,Asian,Australasia,Australasia,Australasia,generalist,Oviparous
+229,Tropidonophis_dahlii,Tropidonophis,Terrestrial,Asian,Australasia,Australasia,Australasia,anurans,Oviparous
+230,Tropidonophis_dolasii,Tropidonophis,Terrestrial,Asian,Australasia,Australasia,Australasia,anurans,Oviparous
+231,Tropidonophis_doriae,Tropidonophis,Terrestrial,Asian,Australasia,Australasia,Australasia,generalist,Oviparous
+232,Tropidonophis_mairii_mairii,Tropidonophis,Terrestrial,Asian,Australasia,Australasia,Australasia,anurans,Oviparous
+233,Tropidonophis_multiscutellatus_1,Tropidonophis,Terrestrial,Asian,Australasia,Australasia,Australasia,generalist,Oviparous
+234,Tropidonophis_multiscutellatus_2,Tropidonophis,Terrestrial,Asian,Australasia,Australasia,Australasia,generalist,Oviparous
+235,Tropidonophis_multiscutellatus_3,Tropidonophis,Terrestrial,Asian,Australasia,Australasia,Australasia,generalist,Oviparous
+236,Tropidonophis_picturatus,Tropidonophis,Terrestrial,Asian,Australasia,Australasia,Australasia,anurans,Oviparous
+237,Tropidonophis_spilogaster,Tropidonophis,Terrestrial,Asian,Asian,Asian,Asian,anurans,Oviparous
+238,Tropidonophis_statisticus_1,Tropidonophis,Terrestrial,Asian,Australasia,Australasia,Australasia,generalist,Oviparous
+239,Tropidonophis_statisticus_2,Tropidonophis,Terrestrial,Asian,Australasia,Australasia,Australasia,generalist,Oviparous
+240,Xenochrophis_bellula,Rhabdophis_B,Semiaquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+241,Xenochrophis_cerasogaster,Xenochrophis,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+242,Xenochrophis_maculatus,Rhabdophis_B,Semiaquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+243,Xenochrophis_trianguligerus_1,Rhabdophis_B,Aquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+244,Xenochrophis_trianguligerus_2,Rhabdophis_B,Aquatic,Asian,Asian,Asian,Asian,generalist,Oviparous
+245,Xenochrophis_vittatus,Rhabdophis_B,Aquatic,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+246,Opisthotropis_andersonii_1,Opisthotropis,Aquatic Burrowing,Asian,Asian,Asian,Asian,aquatic generalist,Oviparous
+247,Natrix_astreptophora,Natrix,Semiaquatic,Asian-European,American,Asian,Asian-European,generalist,Oviparous
+248,Natrix_cetti,Natrix,Semiaquatic,Asian-European,Asian-European,Asian,Asian-European,generalist,Oviparous
+249,Natrix_helvatica,Natrix,Semiaquatic,Asian-European,Asian-European,Asian,Asian-European,generalist,Oviparous
+250,Natrix_maura_1,Natrix,Semiaquatic,Asian-European,Asian-European,Asian,Asian-European,aquatic generalist,Oviparous
+251,Natrix_maura_2,Natrix,Semiaquatic,Asian-European,Asian-European,Asian,Asian-European,aquatic generalist,Oviparous
+252,Natrix_natrix,Natrix,Semiaquatic,Asian-European,Asian-European,Asian,Asian-European,generalist,Oviparous
+253,Natrix_natrix_persa,Natrix,Semiaquatic,Asian-European,Asian-European,Asian,Asian-European,generalist,Oviparous
+254,Natrix_tessellata_1,Natrix,Aquatic,Asian-European,Asian-European,Asian,Asian-European,aquatic generalist,Oviparous
+255,Natrix_tessellata_2,Natrix,Aquatic,Asian-European,Asian-European,Asian,Asian-European,aquatic generalist,Oviparous
+256,Natrix_tessellata_3,Natrix,Aquatic,Asian-European,Asian-European,Asian,Asian-European,aquatic generalist,Oviparous
