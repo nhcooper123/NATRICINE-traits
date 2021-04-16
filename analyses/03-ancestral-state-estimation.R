@@ -11,7 +11,7 @@ library(geiger)
 #-------------------------------------
 # Read in the tree and tidy the names
 #-------------------------------------
-tree <- read.nexus("data/natic_comb dated.nexus")
+tree <- read.nexus("data/datedtree.nexus")
 
 # Fix up species names
 # These are weird because the tip labels include sequence info
@@ -32,12 +32,13 @@ tree
 #-------------------------------------
 # Read in the  metadata and tidy names
 #-------------------------------------
-ds <- read_csv("data/morpho_data_totalphylo.csv")
+ds <- read_csv("data/trait_data_natricine_2021-03.csv")
 
 # First replace spaces with _
 ds <-
   ds %>%
-  mutate(Species = str_replace_all(Species, " ", "_"))
+  mutate(Species = str_replace_all(Species, " ", "_")) %>%
+  dplyr::select(-c(X10:X13))
 
 #----------------------------------------
 # Get summary data for habits and diet
@@ -45,11 +46,11 @@ ds <-
 # Drop species with no habit data
 ds_new <- 
   ds %>%
-  filter(Habit2 != "NA")
+  filter(Habit != "NA")
 
 # Get summary of habit information for manuscript
 ds_new %>%
-  group_by(Habit2) %>%
+  group_by(Habit) %>%
   summarise(N = n(), percentage = (N/nrow(ds_new)) * 100)
 
 # Get summary of diet information for manuscript
@@ -57,27 +58,26 @@ ds_new %>%
   group_by(Diet) %>%
   summarise(N = n(), percentage = (N/nrow(ds_new)) * 100)
 
-#----------------------------------
-# Matching up the tree to the data
-#---------------------------------
-# See if the names match using name.check
-matches <- name.check(phy = tree, data = ds, data.names = ds$Species)
+#----------------------------------------------------------------
+# Match up the tree to the data
+#--------------------------------------------------------------
+# Now see if the names match using name.check
+matches <- name.check(phy = tree, data = ds_new, data.names = ds$Species)
 
-# These are species in the data, but not in the tree
-# matches$data_not_tree
-# No species missing from the tree
-
-# These are species in the TREE, but not in the data
-# matches$tree_not_data
-# 2 species missing from the data
-
-# Remove the species that are not in the data
+# Use drop.tip, and tell it to remove the species you found above that
+# are not in the data
 tree_new <- drop.tip(tree, matches$tree_not_data)
 
-# Check the tree has the right number of tips, and nodes
-# i.e. 256 tips and 255 nodes
-tree_new
+# Remove the missing species from the data
+fix <- match(ds_new$Species, matches$data_not_tree, nomatch = 0)
+ds_new <- subset(ds_new, fix == 0)
 
+# Then order ds_new so it's the same order as the tree
+ds_new <- ds_new[match(tree_new$tip.label, ds_new$Species),]
+
+# Make sure ds_new is a dataframe
+ds_new <- as.data.frame(ds_new)
+ds_new
 #--------------------------------------------------------
 # Ancestral state estimations and plots
 #--------------------------------------------------------
@@ -87,20 +87,19 @@ ds_new <- ds_new[match(tree_new$tip.label, ds_new$Species), ]
 #----------------------------------------------------------------
 # Set up colour palettes
 #----------------------------------------------------------------
-colours_habit<- c("blue", "#51dacf", "red", "#85d272", "#ffb997")
+mycolours_habit <- c("blue", "#51dacf", "#c8808b", "#85d272", "#5b5b5b")
 
-colours_diet <- c("#f7be16", "green", "blue", "red", "yellow", 
-                    "brown", "black", "pink")
+mycolours_diet <- c("#f7be16", "green", "blue", "red", "yellow", 
+                    "brown", "black", "pink", "pink", "pink", "pink", "pink")
 
-colours_repro <- c("green", "blue")
-
-colours_origin <- c("pink", "green", "blue", "yellow")
+mycolours_repro <- c("#5bb274", "#4166af")
+mycolours_origin <- c("#ff6464", "#64e291", "#0d8eae", "#f7be16")
 
 #-----------------
 # Set up PDF
 #-----------------
 
-pdf("outputs/ancestral-states-all.pdf", height = 10, width = 10)
+pdf("outputs/Figure_ancestral-states-all.pdf", height = 10, width = 10)
 par(mfrow = c(2,2))
 
 #-----------
@@ -111,10 +110,10 @@ ancestors_repro <- ace(ds_new$Reproduction, tree_new, type = "d")
 
 # Plot
 plot.phylo(tree_new, label.offset = 2, show.tip.label = FALSE, type = "fan", no.margin = TRUE)
-tiplabels(offset = 1, pch = 21, bg = colours_repro[as.factor(ds_new$Reproduction)], cex = 1, adj = 1)
-nodelabels(pie = ancestors_repro$lik.anc, piecol = colours_repro, cex = 0.5)
+tiplabels(offset = 1, pch = 21, bg = mycolours_repro[as.factor(ds_new$Reproduction)], cex = 1, adj = 1)
+nodelabels(pie = ancestors_repro$lik.anc, piecol = mycolours_repro, cex = 0.5)
 legend("topright", legend = levels(as.factor(ds_new$Reproduction)),
-       fill = colours_repro, xpd = T, bty = "n", cex = 0.6, title = "repro mode")
+       fill = mycolours_repro, xpd = T, bty = "n", cex = 0.6, title = "repro mode")
 
 #-----------
 # ORIGIN
@@ -124,10 +123,10 @@ ancestors_origin<- ace(ds_new$Origin, tree_new, type = "d")
 
 # Plot
 plot.phylo(tree_new, label.offset = 2, show.tip.label = FALSE, type = "fan", no.margin = TRUE)
-tiplabels(offset = 1, pch = 21, bg = colours_origin[as.factor(ds_new$Origin)], cex = 1, adj = 1)
-nodelabels(pie = ancestors_origin$lik.anc, piecol = colours_origin, cex = 0.5)
+tiplabels(offset = 1, pch = 21, bg = mycolours_origin[as.factor(ds_new$Origin)], cex = 1, adj = 1)
+nodelabels(pie = ancestors_origin$lik.anc, piecol = mycolours_origin, cex = 0.5)
 legend("topright", legend = levels(as.factor(ds_new$Origin)),
-       fill = colours_origin, xpd = T, bty = "n", cex = 0.6, title = "origin")
+       fill = mycolours_origin, xpd = T, bty = "n", cex = 0.6, title = "origin")
 
 #-----------
 # DIET
@@ -137,23 +136,23 @@ ancestors_diet <- ace(ds_new$Diet, tree_new, type = "d")
 
 # Plot habits 
 plot.phylo(tree_new, label.offset = 2, show.tip.label = FALSE, type = "fan", no.margin = TRUE)
-tiplabels(offset = 1, pch = 21, bg = colours_diet[as.factor(ds_new$Diet)], cex = 1, adj = 1)
-nodelabels(pie = ancestors_diet$lik.anc, piecol = colours_diet, cex = 0.5)
+tiplabels(offset = 1, pch = 21, bg = mycolours_diet[as.factor(ds_new$Diet)], cex = 1, adj = 1)
+nodelabels(pie = ancestors_diet$lik.anc, piecol = mycolours_diet, cex = 0.5)
 legend("topright", legend = levels(as.factor(ds_new$Diet)),
-       fill = colours_diet, xpd = T, bty = "n", cex = 0.5, title = "diet")
+       fill = mycolours_diet, xpd = T, bty = "n", cex = 0.5, title = "diet")
 
 #-----------
 # HABIT
 #-----------
 # Estimate ancestral states
-ancestors_habit <- ace(ds_new$Habit2, tree_new, type = "d")
+ancestors_habit <- ace(ds_new$Habit, tree_new, type = "d")
 
 # Plot habits 
 plot.phylo(tree_new, label.offset = 2, show.tip.label = FALSE, type = "fan", no.margin = TRUE)
-tiplabels(offset = 1, pch = 21, bg = colours_habit[as.factor(ds_new$Habit2)], cex = 1, adj = 1)
-nodelabels(pie = ancestors_habit$lik.anc, piecol = colours_habit, cex = 0.5)
-legend("topright", legend = levels(as.factor(ds_new$Habit2)),
-       fill = colours_habit, xpd = T, bty = "n", cex = 0.6, title = "habit")
+tiplabels(offset = 1, pch = 21, bg = mycolours_habit[as.factor(ds_new$Habit)], cex = 1, adj = 1)
+nodelabels(pie = ancestors_habit$lik.anc, piecol = mycolours_habit, cex = 0.5)
+legend("topright", legend = levels(as.factor(ds_new$Habit)),
+       fill = mycolours_habit, xpd = T, bty = "n", cex = 0.6, title = "habit")
 
 #-----------
 # Close PDF
