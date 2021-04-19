@@ -1,0 +1,422 @@
+---
+title: "Results from BAMM analysis on Natricine tree"
+author: Deepak et al.
+output:
+  html_notebook:
+    toc: true
+    code_folding: hide
+    fig.caption: true
+fontsize: 14pt
+---
+
+<style type="text/css">
+
+body{
+  font-family: Helvetica;
+  font-size: 14pt;
+}
+
+</style>
+
+
+BAMM settings:
+
+- Iterations: 5,000,000
+- Sampling: every 10,000 iterations
+- Expected number of shifts: 1 (lambda parameter)
+- Number of chains: 4
+- $\lambda$ initial prior: 1.64154476268263
+- $\lambda$ shift prior: 0.0288631318748317
+- $\mu$ initial prior: 1.64154476268263
+
+```{r setup, message = FALSE, warning = FALSE}
+
+library("BAMMtools")
+library("tidyverse")
+library("cowplot")
+library("phytools")
+library("geiger")
+library("kableExtra")
+source("../analyses/gammaCorrected.R")
+
+knitr::opts_chunk$set(fig.pos = "H", fig.width = 9, fig.height = 9, message = FALSE, warning = FALSE)
+options(tinytex.verbose = TRUE)
+
+tree <- read.nexus("../data/datedtree.nexus")
+
+# Fix up species names
+# These are weird because the tip labels include sequence info
+
+# 1. Remove the seq_ tag from the start of the name
+tree$tip.label <- str_remove(tree$tip.label, "seq_[:alpha:]+_\\d+_")
+
+# 2. Remove the punctuation in some of the names
+tree$tip.label <- str_remove_all(tree$tip.label, "[\']")
+
+# 3. Remove the codes from the last two tips which do not have seq
+tree$tip.label <- str_remove(tree$tip.label, "AF544663_")
+tree$tip.label <- str_remove(tree$tip.label, "KC347516_")
+
+# Make sure tree is ultrametric
+tree <- force.ultrametric(tree)
+
+# Check the tree has the right number of tips, and nodes
+# i.e. 249 tips and 248 nodes
+tree
+
+#----------------------------------------------------------------
+# Read in the metadata
+#--------------------------------------------------------------
+# Read in the  metadata
+ds <- read_csv("../data/trait_data_natricine-corrected.csv")
+
+# Replace spaces with _
+ds <-
+  ds %>%
+  mutate(Species = str_replace_all(Species, " ", "_"))
+
+#--------------------------------------------------------------
+# Extract species for each clade and subet the tree
+#--------------------------------------------------------------
+# Extract species from african clade
+Afr <- filter(ds, OriginLTT == "African")
+Afr <- pull(Afr, Species)
+
+# Now see if the names match using name.check
+matches <- name.check(phy = tree, data = Afr, data.names = Afr)
+
+# Remove non African species from the tree
+African <- drop.tip(tree, matches$tree_not_data)
+#--------------------------------------------------------------
+# Extract species from NAmerican clade
+Amer <- filter(ds, OriginLTT == "American")
+Amer <- pull(Amer, Species)
+
+# Now see if the names match using name.check
+matches <- name.check(phy = tree, data = Amer, data.names = Amer)
+
+# Remove non NAmerican species from the tree
+American <- drop.tip(tree, matches$tree_not_data)
+#--------------------------------------------------------------
+# S,E & SE Asia (including Australia) = Origin
+Asia1 <- filter(ds, Origin == "Asian")
+Asia1 <- pull(Asia1, Species)
+
+# Now see if the names match using name.check
+matches <- name.check(phy = tree, data = Asia1, data.names = Asia1)
+
+# Match trees 
+Asian1 <- drop.tip(tree, matches$tree_not_data)
+#--------------------------------------------------------------
+# S,E & SE Asia (excluding Australia) = OriginLTT2
+Asia2 <- filter(ds, OriginLTT2 == "Asian")
+Asia2 <- pull(Asia2, Species)
+
+# Now see if the names match using name.check
+matches <- name.check(phy = tree, data = Asia2, data.names = Asia2)
+
+# Match trees 
+Asian2 <- drop.tip(tree, matches$tree_not_data)
+#--------------------------------------------------------------
+# S,E & SE Asia (including Europe, North Africa & Central Asia, excluding Australia)=OriginLTT1
+Asia3 <- filter(ds, OriginLTT1 == "Asian")
+Asia3 <- pull(Asia3, Species)
+
+# Now see if the names match using name.check
+matches <- name.check(phy = tree, data = Asia3, data.names = Asia3)
+
+# Match trees 
+Asian3 <- drop.tip(tree, matches$tree_not_data)
+#--------------------------------------------------------------
+# Extract species from north European clade
+Europe <- filter(ds, OriginLTT == "Asian-European")
+Europe <- pull(Europe, Species)
+
+# Now see if the names match using name.check
+matches <- name.check(phy = tree, data = Europe, data.names = Europe)
+
+# Match trees 
+European <- drop.tip(tree, matches$tree_not_data)
+
+```
+
+# BAMM chain convergence
+
+```{r bamm_converg, fig.cap = "Figure 1: Trace plot of BAMM's logLikelihood."}
+
+mcmc.out <- read.csv("../data/mcmc_out_natricine.txt")
+mcmc.out <- mcmc.out[floor(0.1 * nrow(mcmc.out)):nrow(mcmc.out), ]
+
+ggplot(mcmc.out) +
+    geom_line(aes(x = generation, y = logLik)) +
+    theme_cowplot()
+
+```
+
+# Credible shift set
+
+```{r css, fig.cap = "Figure 2: Credible shift sets for the Natricines."}
+
+css.natr <- credibleShiftSet(edata, expectedNumberOfShifts = 1)
+css.natr$number.distinct
+
+summary(css.natr)
+
+#pdf("../outputs/BAMM_credibleShiftSet.pdf", height = 40, width = 12)
+plot.credibleshiftset(css.natr)
+#dev.off()
+
+```
+
+# Best shift configuration
+
+```{r bsc, fig.cap = "Figure 3: Best shift configuration for the Natricines."}
+
+best.config <- getBestShiftConfiguration(edata, expectedNumberOfShifts = 1)
+
+#pdf("../outputs/BAMM_bestShiftConfiguration.pdf", height = 40, width = 12)
+plot.bammdata(best.config, lwd = 2.5);axisPhylo()
+addBAMMshifts(best.config, cex = 2.5)
+#dev.off()
+
+```
+
+# Rate-Through-Time plot
+
+## Full group
+
+```{r rtt_plot, fig.cap = "Figure 4: Rate-through-time plots of the entire clade."}
+
+#pdf("../outputs/BAMM_rateThroughTime_global.pdf", height = 12, width = 12)
+plotRateThroughTime(edata, ratetype = "speciation", intervalCol = "black", avgCol = "black")
+#dev.off()
+
+```
+
+## By continent
+
+```{r rtt_plot_continent, fig.cap = "Figure 5: Rate-through-time plots of the four main regions. Top-left: Americas, Top-right: Africa, Bottom-left: Asia + Australia, Bottom-right: Eurasia + North Africa."}
+
+ingroup <- read.tree("../data/natricine_ingroup.tre")
+
+edata <- getEventData(ingroup, "../data/event_data_natricine.txt", burnin = 0.1)
+
+mrca.africa <- getMRCA(tree, African$tip.label)
+gamma.africa <- gammaCorrected(extract.clade(tree, mrca.africa))
+
+mrca.america <- getMRCA(tree, American$tip.label)
+gamma.america <- gammaCorrected(extract.clade(tree, mrca.america))
+
+mrca.eurafrasia <- getMRCA(tree, Asian3$tip.label)
+gamma.eurafrasia <- gammaCorrected(extract.clade(tree, mrca.eurafrasia))
+
+mrca.asianotaustr <- getMRCA(tree, Asian2$tip.label)
+gamma.asianotaustr <- gammaCorrected(extract.clade(tree, mrca.asianotaustr))
+
+mrca.europe <- getMRCA(tree, European$tip.label)
+gamma.europe <- gammaCorrected(extract.clade(tree, mrca.europe))
+
+mrca.asiaaustr <- getMRCA(tree, Asian1$tip.label)
+gamma.asiaaustr <- gammaCorrected(extract.clade(tree, mrca.asiaaustr))
+
+#----------------------------------------------------------------
+# Set up colour palettes
+#----------------------------------------------------------------
+mycolours_habit<- c("blue", "#51DACF", "#C8808B", "#85D272", "#5B5B5B")
+mycolours_diet <- c("#F7BE16", "green", "blue", "red", "yellow",
+                    "brown", "black", "pink", "pink", "pink", "pink", "pink")
+mycolours_repro <- c("#5BB274", "#4166AF")
+mycolours_origin <- c("#FF6464", "#64E291", "#0D8EAE", "#F7BE16")
+
+
+#pdf("../outputs/BAMM_rateThroughTime_perRegion.pdf", height = 12, width = 20)
+par(mfrow = c(2, 2))
+plotRateThroughTime(edata, ratetype = "speciation", node = mrca.america, nodetype = "include", axis.labels = TRUE, ylim = c(0, 0.8), intervalCol = mycolours_origin[2], avgCol = mycolours_origin[2])
+## text(x = 20, y = 0.7, labels = "North & Central America")
+## text(x = 20, y = 0.55, labels = substitute(paste(gamma, "=", res), list(res = gamma.america)))
+
+plotRateThroughTime(edata, ratetype = "speciation", node = mrca.africa, nodetype = "include", axis.labels = TRUE, ylim = c(0, 0.8), intervalCol = mycolours_origin[1], avgCol = mycolours_origin[1])
+## text(x = 20, y = 0.7, labels = "sub-Saharan Africa (including Seychelles)")
+## text(x = 20, y = 0.55, labels = substitute(paste(gamma, "=", res), list(res = gamma.africa)))
+
+plotRateThroughTime(edata, ratetype = "speciation", node = mrca.asiaaustr, nodetype = "include", axis.labels = TRUE, ylim = c(0, 0.8), intervalCol = mycolours_origin[3], avgCol = mycolours_origin[3])
+## text(x = 20, y = 0.7, labels = "S, E & SE Asia (including Australasia)")
+## text(x = 20, y = 0.55, labels = substitute(paste(gamma, "=", res), list(res = gamma.asiaaustr)))
+
+plotRateThroughTime(edata, ratetype = "speciation", node = mrca.eurafrasia, nodetype = "include", axis.labels = TRUE, ylim = c(0, 0.8), intervalCol = mycolours_origin[4], avgCol = mycolours_origin[4])
+## text(x = 20, y = 0.7, labels = "Europe, North Africa & Central Asia")
+## text(x = 20, y = 0.55, labels = substitute(paste(gamma, "=", res), list(res = gamma.eurafrasia)))
+
+## plotRateThroughTime(edata, ratetype = "speciation", node = mrca.asianotaustr, nodetype = "include", axis.labels = FALSE, ylim = c(0, 0.8))
+## text(x = 20, y = 0.7, labels = "S, E & SE Asia (including Europe,\nNorth Africa & Central Asia,\nexcluding Australasia)")
+## text(x = 20, y = 0.55, labels = substitute(paste(gamma, "=", res), list(res = gamma.asianotaustr)))
+
+## plotRateThroughTime(edata, ratetype = "speciation", node = mrca.asiaonly, nodetype = "include", ylim = c(0, 0.8))
+## text(x = 20, y = 0.7, labels = "S, E & SE Asia (excluding Australasia)")
+## text(x = 20, y = 0.55, labels = substitute(paste(gamma, "=", res), list(res = gamma.asiaonly)))
+#dev.off()
+
+```
+
+# Association between Habit, Diet, and Reproductive Mode
+
+```{r make_simmap, eval = FALSE, echo = FALSE}
+
+library("phytools")
+library("kableExtra")
+
+traits <- read.csv("../data/trait_data_natricine-corrected.csv")
+
+### Terrestrial/Burrowing + Generalist -> 0
+### Terrestrial/Burrowing + Specialist -> 1
+### Aquatic + Generalist -> 2
+### Aquatic + Specialist -> 3
+
+traits$habit.diet <- NA
+for(i in 1:nrow(traits)){
+    if(!any(is.na(c(traits$Habit[i], traits$Diet[i])))){
+        if(sum(traits$Habit[i] == c("Terrestrial", "Burrowing")) != 0 &
+           sum(traits$Diet[i] == c("generalist", "aquatic generalist")) != 0){
+            traits$habit.diet[i] <- "tergen"
+        } else if(sum(traits$Habit[i] == c("Terrestrial", "Burrowing")) != 0 &
+                  sum(traits$Diet[i] == c("generalist", "aquatic generalist")) == 0){
+            traits$habit.diet[i] <- "terspec"
+        } else if(sum(traits$Habit[i] == c("Terrestrial", "Burrowing")) == 0 &
+                  sum(traits$Diet[i] == c("generalist", "aquatic generalist")) != 0){
+            traits$habit.diet[i] <- "aquagen"
+        } else {
+            traits$habit.diet[i] <- "aquaspec"
+        }
+    }
+}
+
+
+### Terrestrial/Burrowing/Semiaquatic + Generalist -> 0
+### Terrestrial/Burrowing/Semiaquatic + Specialist -> 1
+### Aquatic + Generalist -> 2
+### Aquatic + Specialist -> 3
+
+traits$habit.diet.alt <- NA
+for(i in 1:nrow(traits)){
+    if(!any(is.na(c(traits$Habit[i], traits$Diet[i])))){
+        if(sum(traits$Habit[i] == c("Terrestrial", "Semiaquatic", "Burrowing")) != 0 &
+           sum(traits$Diet[i] == c("generalist", "aquatic generalist")) != 0){
+            traits$habit.diet.alt[i] <- "tergen"
+        } else if(sum(traits$Habit[i] == c("Terrestrial", "Semiaquatic", "Burrowing")) != 0 &
+                  sum(traits$Diet[i] == c("generalist", "aquatic generalist")) == 0){
+            traits$habit.diet.alt[i] <- "terspec"
+        } else if(sum(traits$Habit[i] == c("Terrestrial", "Semiaquatic", "Burrowing")) == 0 &
+                  sum(traits$Diet[i] == c("generalist", "aquatic generalist")) != 0){
+            traits$habit.diet.alt[i] <- "aquagen"
+        } else {
+            traits$habit.diet.alt[i] <- "aquaspec"
+        }
+    }
+}
+
+
+### Terrestrial/Burrowing + Oviparous -> 0
+### Terrestrial/Burrowing + Viviparous -> 1
+### Aquatic + Oviparous -> 2
+### Aquatic + Viviparous -> 3
+
+traits$habit.repro <- NA
+for(i in 1:nrow(traits)){
+    if(!any(is.na(c(traits$Habit[i], traits$Reproduction[i])))){
+        if(sum(traits$Habit[i] == c("Terrestrial", "Burrowing")) != 0 &
+           sum(traits$Reproduction[i] == "Oviparous") != 0){
+            traits$habit.repro[i] <- "terovi"
+        } else if(sum(traits$Habit[i] == c("Terrestrial", "Burrowing")) != 0 &
+                  sum(traits$Reproduction[i] == "Oviparous") == 0){
+            traits$habit.repro[i] <- "tervivi"
+        } else if(sum(traits$Habit[i] == c("Terrestrial", "Burrowing")) == 0 &
+                  sum(traits$Reproduction[i] == "Oviparous") != 0){
+            traits$habit.repro[i] <- "aquaovi"
+        } else {
+            traits$habit.repro[i] <- "aquavivi"
+        }
+    }
+}
+
+habit.diet <- na.omit(setNames(traits$habit.diet, traits$Species))
+habit.diet.alt <- na.omit(setNames(traits$habit.diet.alt, traits$Species))
+habit.repro <- na.omit(setNames(traits$habit.repro, traits$Species))
+
+tree.pruned <- drop.tip(tree, tree$tip.label[is.na(match(tree$tip.label, names(habit.diet)))])
+tree.pruned.repro <- drop.tip(tree, tree$tip.label[is.na(match(tree$tip.label, names(habit.repro)))])
+
+correvo.habit.diet.er <- make.simmap(tree.pruned, habit.diet, model = "ER")
+correvo.habit.diet.sym <- make.simmap(tree.pruned, habit.diet, model = "SYM")
+correvo.habit.diet.ard <- make.simmap(tree.pruned, habit.diet, model = "ARD")
+
+correvo.habit.diet.alt.er <- make.simmap(tree.pruned, habit.diet.alt, model = "ER")
+correvo.habit.diet.alt.sym <- make.simmap(tree.pruned, habit.diet.alt, model = "SYM")
+correvo.habit.diet.alt.ard <- make.simmap(tree.pruned, habit.diet.alt, model = "ARD")
+
+correvo.habit.repro.er <- make.simmap(tree.pruned.repro, habit.repro, model = "ER")
+correvo.habit.repro.sym <- make.simmap(tree.pruned.repro, habit.repro, model = "SYM")
+correvo.habit.repro.ard <- make.simmap(tree.pruned.repro, habit.repro, model = "ARD")
+
+```
+
+We were primarily interested in whether reproductive mode was associated with an aquatic habit, so we collapsed our habit categories down to aquatic (aquatic + aquatic burrower + semiaquatic) and non-aquatic (terrestrial burrower + terrestrial non-burrower). We repeated the analysis including semiaquatic species in the non-aquatic group. For the test between habit and dietary specialism we collapsed our diet categories into generalists (generalists + aquatic generalists) and specialists (the six other diet categories) see supplementary Table S5.
+
+To test for the associations, we combined the traits of interest (Habit + Diet, Habit(Alternative) + Diet, and Habit + Reproductive Mode) to generate a new, 4-state trait in which each state represents one of the possible pairwise combinations between the states of the original traits. We then used the new traits to estimate the transition rates between states by fitting a Mk model, with which we tested three different scenarios: one with equal rates of transition between all states, one with symmetrical rates between pairs of states, and the last with individual rates for each pair of states. We then compared the different models using AIC, using a deltaAIC value of 2 as threshold for selecting the best model. 
+
+```{r AIC_habit_diet, echo = FALSE}
+
+aic.habit.diet <- c(AIC(correvo.habit.diet.er), AIC(correvo.habit.diet.sym), AIC(correvo.habit.diet.ard))
+
+habit.diet.table <- data.frame(
+    Model = c("Equal Rates", "Symmetrical", "All Rates Different"),
+    AICc = mvMORPH::aicw(aic.habit.diet, aicc = TRUE)$AIC,
+    deltaAICc = mvMORPH::aicw(aic.habit.diet, aicc = TRUE)$AIC - min(mvMORPH::aicw(aic.habit.diet, aicc = TRUE)$AIC),
+    AICw = mvMORPH::aicw(aic.habit.diet, aicc = TRUE)$aicweights
+           )
+
+kable(habit.diet.table, format = "markdown", caption = "Table 1: Model comparison for the association between Habit and Diet using the standard classification for Habit")
+
+```
+
+Our results show weak support for both the ER and the ARD models (table 1). However, when using the alternative classification of habits, we found that the symmetrical model has stronger support from the data than the other two (table 2). These results combined likely highlight the importance of semiaquatic species, that seem to have increased transition rates between dietary specialization and generalization (supplementary table XX).
+
+```{r AIC_habit_diet_alt, echo = FALSE}
+
+aic.habit.diet.alt <- c(AIC(correvo.habit.diet.alt.er), AIC(correvo.habit.diet.alt.sym), AIC(correvo.habit.diet.alt.ard))
+
+habit.diet.alt.table <- data.frame(
+    Model = c("Equal Rates", "Symmetrical", "All Rates Different"),
+    AICc = mvMORPH::aicw(aic.habit.diet.alt, aicc = TRUE)$AIC,
+    deltaAICc = mvMORPH::aicw(aic.habit.diet.alt, aicc = TRUE)$AIC - min(mvMORPH::aicw(aic.habit.diet.alt, aicc = TRUE)$AIC),
+    AICw = mvMORPH::aicw(aic.habit.diet.alt, aicc = TRUE)$aicweights
+           )
+
+kable(habit.diet.alt.table, format = "markdown", caption = "Table 2: Model comparison for the association between Habit and Diet using the alternative classification for Habit")
+
+
+```
+
+Using a model averaging approach, the transition rates from terrestrial generalist species to either aquatic generalists or terrestrial specialists are roughly three and two times higher than all the others, respectively (table 3).
+
+```{r habit_diet_averag, echo = FALSE}
+
+kable((correvo.habit.diet.er$Q * habit.diet.table$AICw[1]) + (correvo.habit.diet.ard$Q * habit.diet.table$AICw[3]), format = "markdown", caption = "Table 3: Model averaged transition rates for the association between Habit and Diet, using the standard classification for Habit.")
+
+```
+
+We also found unequivocal support for a model with all rates different for the association between habitat and reproductive mode (table 4), driven especially by a quite high transition from terrestrial to aquatic habits for viviparous species (supplementary table XX). 
+
+```{r AIC_habit_repro, echo = FALSE}
+
+aic.habit.repro <- c(AIC(correvo.habit.repro.er), AIC(correvo.habit.repro.sym), AIC(correvo.habit.repro.ard))
+
+habit.repro.table <- data.frame(
+    Model = c("Equal Rates", "Symmetrical", "All Rates Different"),
+    AICc = mvMORPH::aicw(aic.habit.repro, aicc = TRUE)$AIC,
+    deltaAICc = mvMORPH::aicw(aic.habit.repro, aicc = TRUE)$AIC - min(mvMORPH::aicw(aic.habit.repro, aicc = TRUE)$AIC),
+    AICw = mvMORPH::aicw(aic.habit.repro, aicc = TRUE)$aicweights
+           )
+
+kable(habit.repro.table, format = "markdown", caption = "Table 4: Model comparison for the association between Habit and Reproductive Mode using the standard classification for Habit")
+
+```
