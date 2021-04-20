@@ -421,7 +421,7 @@ kable(habit.repro.table, format = "markdown", caption = "Table 4: Model comparis
 
 ```
 
-The parameters indicate higher transition rates between
+The parameters indicate higher transition rates between terrestrial and aquatic viviparous species, that are roughly three times the rates between the second most frequent transition (between terrestrial and aquatic oviparous species).
 
 ```{r habit_repro_rates, echo = FALSE}
 
