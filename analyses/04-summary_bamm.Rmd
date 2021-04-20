@@ -157,6 +157,10 @@ ggplot(mcmc.out) +
 
 ```{r css, fig.cap = "Figure 2: Credible shift sets for the Natricines."}
 
+ingroup <- read.tree("../data/natricine_ingroup.tre")
+
+edata <- getEventData(ingroup, "../data/event_data_natricine.txt", burnin = 0.1)
+
 css.natr <- credibleShiftSet(edata, expectedNumberOfShifts = 1)
 css.natr$number.distinct
 
@@ -196,10 +200,6 @@ plotRateThroughTime(edata, ratetype = "speciation", intervalCol = "black", avgCo
 ## By continent
 
 ```{r rtt_plot_continent, fig.cap = "Figure 5: Rate-through-time plots of the four main regions. Top-left: Americas, Top-right: Africa, Bottom-left: Asia + Australia, Bottom-right: Eurasia + North Africa."}
-
-ingroup <- read.tree("../data/natricine_ingroup.tre")
-
-edata <- getEventData(ingroup, "../data/event_data_natricine.txt", burnin = 0.1)
 
 mrca.africa <- getMRCA(tree, African$tip.label)
 gamma.africa <- gammaCorrected(extract.clade(tree, mrca.africa))
@@ -418,5 +418,13 @@ habit.repro.table <- data.frame(
            )
 
 kable(habit.repro.table, format = "markdown", caption = "Table 4: Model comparison for the association between Habit and Reproductive Mode using the standard classification for Habit")
+
+```
+
+The parameters indicate higher transition rates between
+
+```{r habit_repro_rates, echo = FALSE}
+
+kable(correvo.habit.repro.sym$Q, format = "markdown", caption = "Table 5: Transition rates for the association between Habit and Reproductive Mode, using the standard classification for Habit.")
 
 ```
