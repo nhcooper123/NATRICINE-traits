@@ -93,7 +93,6 @@ mycolours_diet <- c("#f7be16", "green", "blue", "red", "yellow",
                     "brown", "black", "pink", "pink", "pink", "pink", "pink")
 
 mycolours_repro <- c("#5bb274", "#4166af")
-mycolours_origin <- c("#ff6464", "#64e291", "#0d8eae", "#f7be16")
 
 #-----------------
 # Set up PDF
@@ -114,19 +113,6 @@ tiplabels(offset = 1, pch = 21, bg = mycolours_repro[as.factor(ds_new$Reproducti
 nodelabels(pie = ancestors_repro$lik.anc, piecol = mycolours_repro, cex = 0.5)
 legend("topright", legend = levels(as.factor(ds_new$Reproduction)),
        fill = mycolours_repro, xpd = T, bty = "n", cex = 0.6, title = "repro mode")
-
-#-----------
-# ORIGIN
-#-----------
-# Estimate ancestral states
-ancestors_origin<- ace(ds_new$Origin, tree_new, type = "d")
-
-# Plot
-plot.phylo(tree_new, label.offset = 2, show.tip.label = FALSE, type = "fan", no.margin = TRUE)
-tiplabels(offset = 1, pch = 21, bg = mycolours_origin[as.factor(ds_new$Origin)], cex = 1, adj = 1)
-nodelabels(pie = ancestors_origin$lik.anc, piecol = mycolours_origin, cex = 0.5)
-legend("topright", legend = levels(as.factor(ds_new$Origin)),
-       fill = mycolours_origin, xpd = T, bty = "n", cex = 0.6, title = "origin")
 
 #-----------
 # DIET
