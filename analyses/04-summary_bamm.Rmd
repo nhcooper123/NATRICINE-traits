@@ -1,6 +1,6 @@
 ---
 title: "Results from BAMM analysis on Natricine tree"
-author: Deepak et al.
+author: Gustavo Burin
 output:
   html_notebook:
     toc: true
