@@ -36,13 +36,12 @@ tree
 # Match up the tree to the data
 #--------------------------------------------------------------
 # Read in the  metadata
-ds <- read_csv("data/trait_data_natricine_2021-03.csv")
+ds <- read_csv("data/trait_data_natricine_geography.csv")
 
 # Replace spaces with _
 ds <-
   ds %>%
-  mutate(Species = str_replace_all(Species, " ", "_")) %>%
-  dplyr::select(-c(X10:X13))
+  mutate(Species = str_replace_all(Species, " ", "_"))
 
 # Now see if the names match using name.check
 matches <- name.check(phy = tree, data = ds, data.names = ds$Species)
@@ -89,8 +88,8 @@ rownames(habit_data) <- tree_new$tip.label
 
 origin_data <- 
   ds_new %>%
-  mutate(Origin = as.factor(Origin)) %>%
-  select(Origin)
+  mutate(Distribution = as.factor(Geography)) %>%
+  select(Distribution)
 # Add rownames as species names
 rownames(origin_data) <- tree_new$tip.label
 
@@ -103,7 +102,7 @@ mycolours_diet <- c("#f7be16", "green", "blue", "red", "yellow",
                     "brown", "black", "pink", "pink", "pink", "pink", "pink")
 
 mycolours_repro <- c("#5bb274", "#4166af")
-mycolours_origin <- c("#ff6464", "#64e291", "#0d8eae", "#f7be16")
+mycolours_origin <- c("#00ffff", "#ff00bf", "#ffbf00", "#ff0000", "#8000ff", "#cd9fe2","#0040ff", "#80ff00" )
 #----------------------------------------------------------------
 # Make trees using ggtree
 # Note that this code will throw lots of warnings about scales
@@ -115,8 +114,8 @@ base_tree <- ggtree(tree_new, layout = "rectangular")
 # Plot the first thing (reproductive mode)
 # This will throw some warnings about scales which can be ignored
 p1 <- 
-  gheatmap(base_tree, repro_data, offset =0, width =.1, colnames = FALSE) +
-  scale_fill_manual(values = mycolours_repro, name = "reproductive mode")
+  gheatmap(base_tree, origin_data, offset = 0, width =.1, colnames = FALSE) +
+  scale_fill_manual(values = mycolours_origin, name = "distribution", guide = guide_legend(order = 1))
 
 # To add a different scale bar requires a bit of code
 # from ggnewscale()
@@ -126,8 +125,8 @@ p2 <- p1 + new_scale_fill()
 # distance is controlled by the offset value
 # This will throw some warnings about scales which can be ignored
 p3 <- 
-  gheatmap(p2, origin_data, offset = 4, width =.1, colnames = FALSE) +
-  scale_fill_manual(values = mycolours_origin, name = "origin")
+  gheatmap(p2, repro_data, offset =4, width =.1, colnames = FALSE) +
+  scale_fill_manual(values = mycolours_repro, name = "reproductive mode", guide = guide_legend(order = 2))
 
 # To add a different scale bar requires a bit of code
 # from ggnewscale()
@@ -138,7 +137,7 @@ p4 <- p3 + new_scale_fill()
 # This will throw some warnings about scales which can be ignored
 p5 <- 
   gheatmap(p4, diet_data, offset = 8, width =.1, colnames = FALSE) +
-  scale_fill_manual(values = mycolours_diet, name = "diet")
+  scale_fill_manual(values = mycolours_diet, name = "diet", guide = guide_legend(order =3))
 
 p6 <- p5 + new_scale_fill()
 
@@ -147,7 +146,7 @@ p6 <- p5 + new_scale_fill()
 # This will throw some warnings about scales which can be ignored
 p7 <- 
   gheatmap(p6, habit_data, offset = 12, width =.1, colnames = FALSE) +
-  scale_fill_manual(values = mycolours_habit, name = "habit")
+  scale_fill_manual(values = mycolours_habit, name = "habit", guide = guide_legend(order =4))
 
 # Save the plot
-ggsave(filename = "outputs/Figure4-tree-with-traits.png", height = 7.5)
+ggsave(p7, filename = "outputs/Figure5-tree-with-traits.png", height = 8.5)
