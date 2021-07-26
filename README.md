@@ -1,11 +1,11 @@
 # NATRICINE-traits
-Code for Natricine traits paper from V.Deepak's NATRICINE MSCA project
+Code for Natricine traits paper from V.Deepak's NATRICINE MSCA project. 
 
 *This README is a work in progress...*
 
 Author(s): V.Deepak, Gustavo Burin and Natalie Cooper.
 
-This repository contains all the code and data used in the manuscript [Link to final published pdf will be here]().
+This repository contains the R code and data used in the manuscript [Link to final published pdf will be here](). Analyses done using other packages are not included here.
 
 To cite the paper: 
 > 
@@ -30,19 +30,16 @@ The main analyses are in the following scripts within the `analyses/` folder.
 
 1. *XXXX.R*. 
 
+
+## Figures
+1. Figure 1 used Adobe Illustrator. 
+2. Figure 2 is the phylogeny from MrBayes modified in Adobe Illustrator.
+3. Figure 3 shows ancestral area estimations from BioGeoBEARS. Table 4
+4. Figure 4 uses `.R` code BAMM 
+5. Figure 5 uses `.R` code 4 traits
+6. Table 5 = trait transitions, Table S5 and S6
+
 -------
 ## Other folders
 
 * `/outputs` contains the figures and tables.
-
-
-------
-## Session Info
-For reproducibility purposes, here is the output of `devtools:session_info()` used to perform the analyses in the publication.
-
-## Checkpoint for reproducibility
-To rerun all the code with packages as they existed on CRAN at time of our analyses we recommend using the `checkpoint` package, and running this code prior to the analysis:
-
-```{r}
-checkpoint("2021-XX-XX") 
-```
