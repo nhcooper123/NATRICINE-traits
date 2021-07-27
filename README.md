@@ -13,7 +13,7 @@ To cite the paper:
 To cite this repo: 
 > DEEPAK, V., GUSTAVO BURIN, and NATALIE COOPER. NATRICINE-traits. R code for the paper. ZENODO LINK TO BE ADDED ON ACCEPTANCE.
 
-![alt text](https://github.com/nhcooper123/NATRICINE-traits/raw/master/outputs/Figure5-tree-with-traits.png)
+![Figure 6](https://github.com/nhcooper123/NATRICINE-traits/blob/main/outputs/Figure6-tree-with-traits.png)
 
 ------
 
