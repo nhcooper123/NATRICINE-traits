@@ -1,6 +1,6 @@
 # Code for figure 4 (this was then modified in illustrator) 
 ### Code by V Deepak
-### Tidied by Natalie Cooper Apr 2021
+### Tidied by Natalie Cooper July 2021
 
 #-------------------------
 # Load libraries
@@ -149,4 +149,4 @@ p7 <-
   scale_fill_manual(values = mycolours_habit, name = "habit", guide = guide_legend(order =4))
 
 # Save the plot
-ggsave(p7, filename = "outputs/Figure5-tree-with-traits.png", height = 8.5)
+ggsave(p7, filename = "outputs/Figure6-tree-with-traits.png", height = 8.5)
