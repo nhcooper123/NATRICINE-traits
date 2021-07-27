@@ -38,6 +38,8 @@ The main analyses are in the following scripts within the `analyses/` folder.
 4. Figure 4 uses `.R` code BAMM 
 5. Figure 5 uses `.R` code 4 traits
 6. Table 5 = trait transitions, Table S5 and S6
+7. Supp Fig 2 = BAMM
+8. Supp Figure 3 = ancestral states
 
 -------
 ## Other folders
