@@ -26,10 +26,10 @@ Data required to run the analyses is included in the `data/` folder. The full da
 ------
 
 ## Analyses
-All code used to run R analyses and make figures is included in the `analyses/` folder. Before starting remember to open an RStudio project from that folder. Note that analyses using something other than R are not included here. Most code was written by V Deepak, and tidied by Natalie Cooper. BAMM analyses were written by Gustavo Burin.
+All code used to run R analyses and make figures is included in the `analyses/` folder. Before starting remember to open an RStudio project from that folder. Note that analyses using something other than R are not included here. BioGeoBEARS analyses were written by V.Deepak. BAMM analyses were written by Gustavo Burin. Remaining code was written by V Deepak, and tidied by Natalie Cooper.
 
-* *01*. BioGeoBEARS code [Deepak]. Runs biogeography analyses, results in Table 4, and Figure 3. TO ADD!
-* *02-summary_bamm.Rmd*. Runs the BAMM analyses and trait transition analyses. Figures 4 and 5, supplementary Figure S2. Results in Table 5, supplementary Tables S5 and S6.
+* *01-BioGeoBEARS*. BioGeoBEARS code and data [Deepak]. Runs biogeography analyses, results in Table 4, and Figure 3.
+* *02-summary_bamm.Rmd*. [Gustavo] Runs the BAMM analyses and trait transition analyses. Figures 4 and 5, supplementary Figure S2. Results in Table 5, supplementary Tables S5 and S6.
 * *03-four-trait-tree-figures.R*. Creates Figure 6.
 * *04-ancestral-state-estimation.R*. Runs ancestral state estimations for natural history traits and creates supplementary Figure S3
 * *05-plot-phylogeny-node-support.R*. Code for adding support values to branches of phylogenies.
