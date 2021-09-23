@@ -11,7 +11,9 @@ To cite the paper:
 > DEEPAK, V., NATALIE COOPER, NIKOLAY A. POYARKOV, FRED KRAUS, ABHIJIT DAS, SURYA NARAYANAN, JEFFERY W. STREICHER, GUSTAVO BURIN, SARAH-JANE SMITH and DAVID J. GOWER. Multilocus phylogeny, natural-history traits, and classification of natricine (Serpentes: Natricinae) snakes. 2021. Zoological Journal of the Linnaean Society. In revision. 
 
 To cite this repo: 
-> DEEPAK, V., GUSTAVO BURIN, and NATALIE COOPER. NATRICINE-traits. R code for the paper. ZENODO LINK TO BE ADDED ON ACCEPTANCE.
+> DEEPAK, V., GUSTAVO BURIN, and NATALIE COOPER. NATRICINE-traits. Code for the paper. DOI: 10.5281/zenodo.5524558.
+
+[![DOI](https://zenodo.org/badge/347036211.svg)](https://zenodo.org/badge/latestdoi/347036211)
 
 ![Figure 6](https://github.com/nhcooper123/NATRICINE-traits/blob/main/outputs/Figure6-tree-with-traits.png)
 
