@@ -1,14 +1,12 @@
 # NATRICINE-traits
 Code for Natricine traits paper from V.Deepak's NATRICINE MSCA project. 
 
-*This README is a work in progress...*
-
 Author(s): V.Deepak, Gustavo Burin and Natalie Cooper.
 
 This repository contains the R code and data used in the manuscript *Multilocus phylogeny, natural-history traits, and classification of natricine (Serpentes: Natricinae) snakes* [Link to final published pdf will be here](). Analyses done using other packages are not included here.
 
 To cite the paper: 
-> DEEPAK, V., NATALIE COOPER, NIKOLAY A. POYARKOV, FRED KRAUS, ABHIJIT DAS, SURYA NARAYANAN, JEFFERY W. STREICHER, GUSTAVO BURIN, SARAH-JANE SMITH and DAVID J. GOWER. Multilocus phylogeny, natural-history traits, and classification of natricine (Serpentes: Natricinae) snakes. 2021. Zoological Journal of the Linnaean Society. In revision. 
+> DEEPAK, V., NATALIE COOPER, NIKOLAY A. POYARKOV, FRED KRAUS, ABHIJIT DAS, SURYA NARAYANAN, JEFFERY W. STREICHER, GUSTAVO BURIN, SARAH-JANE SMITH and DAVID J. GOWER. Multilocus phylogeny, natural-history traits, and classification of natricine (Serpentes: Natricinae) snakes. 2021. Zoological Journal of the Linnaean Society. In press. 
 
 To cite this repo: 
 > DEEPAK, V., GUSTAVO BURIN, and NATALIE COOPER. NATRICINE-traits. Code for the paper. DOI: 10.5281/zenodo.5524558.
